@@ -39,7 +39,7 @@ public class RecordInHistory : MonoBehaviour
             if(timePlay - timeVibration >= 1f)
             {
                 timeVibration = timePlay;
-                Handheld.Vibrate();
+                if(PlayerData.vibration == 1) Handheld.Vibrate();
             }
             if(timePlay > length)
             {

@@ -10,20 +10,8 @@ public class RatePopUp : MonoBehaviour
     public Button rateBtn;
     public Button laterBtn;
     public GameObject rateActive;
-    public GameObject rateInActive;
     private void Awake()
     {
-        if(PlayerData.rate == 0)
-        {
-            rateActive.SetActive(false) ;
-            rateInActive.SetActive(true);
-        }
-        else
-        {
-            rateInActive.SetActive(false);
-            rateActive.SetActive(true);
-        }
-
         for(int i = 0; i < brownStars.Count; i++)
         {
             int index = i;
@@ -60,11 +48,5 @@ public class RatePopUp : MonoBehaviour
     {
         //link ra app
         PopUpMovement.Instance.HidePopUp(this.gameObject);
-        if(PlayerData.rate == 0)
-        {
-            PlayerData.rate = 1;
-            rateActive.SetActive(true);
-            rateInActive.SetActive(false);
-        }
     }
 }

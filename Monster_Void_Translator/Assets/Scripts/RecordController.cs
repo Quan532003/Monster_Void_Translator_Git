@@ -59,7 +59,7 @@ public class RecordController : MonoBehaviour
             {
                 timeVibration = timePlay;
                 //rung
-                Handheld.Vibrate();
+                if(PlayerData.vibration == 1) Handheld.Vibrate();
             }
             SetFillOnPlay();
             if(timePlay >= SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds[indexSound].length)
