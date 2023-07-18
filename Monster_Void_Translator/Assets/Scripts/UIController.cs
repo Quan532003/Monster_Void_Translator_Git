@@ -11,11 +11,11 @@ public class UIController : MonoBehaviour
     public Text modeText;
     int currentPopUp = 1;
     List<string> tittle = new List<string> { "Sound", "Translator", "Infor", "History" };
-
-    public List<Text> modeTextInBtn;
+    public List<GameObject> activeBtn = new List<GameObject>();
+    public List<GameObject> inActiveBtn = new List<GameObject>();
+   
     private void Awake()
     {
-        modeTextInBtn[1].color = Color.yellow;
         for (int i = 0; i < modeButtons.Count; i++)
         {
             int index = i;
@@ -29,9 +29,11 @@ public class UIController : MonoBehaviour
     {
         if (index == currentPopUp) return;
         PopUpMovement.Instance.ChangePopUp(popUps[index], popUps[currentPopUp], index < currentPopUp);
+        activeBtn[index].SetActive(true);
+        inActiveBtn[index].SetActive(false);
 
-        modeTextInBtn[index].color = Color.yellow;
-        modeTextInBtn[currentPopUp].color = Color.black;
+        activeBtn[currentPopUp].SetActive(false);
+        inActiveBtn[currentPopUp].SetActive(true);
         currentPopUp = index;
         modeText.text = tittle[index];
         if(index == 0)

@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PopUpMovement : MonoBehaviour
 {
-    float bigScale = 1.3f;
+    float bigScale = 1.15f;
     float timeScale = 0.3f;
     float recordContentSize = 300f;
     public static PopUpMovement Instance;

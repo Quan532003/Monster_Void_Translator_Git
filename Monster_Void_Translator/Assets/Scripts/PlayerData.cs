@@ -14,7 +14,31 @@ public class PlayerData
     const string SoundIndex = "SoundIndex";
     const string NumberRecordHistory = "NumberRecord";
     const string LockMonster = "LockMonster";
+    const string NoAD = "NoAD";
+    const string Rate = "Rate";
+    public static int noAD
+    {
+        set
+        {
+            PlayerPrefs.SetInt(NoAD, value);
+        }
+        get
+        {
+            return PlayerPrefs.GetInt(NoAD, 0);
+        }
+    }
 
+    public static int rate
+    {
+        set
+        {
+            PlayerPrefs.SetInt(Rate, value);
+        }
+        get
+        {
+            return PlayerPrefs.GetInt(Rate, 0);
+        }
+    }
     public static string lockMonster
     {
         set
