@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: BabyOpilaBirds
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: 93e6588f13ca0b3419e3e28d0b2ce23d, type: 3}
+  - {fileID: 8300000, guid: 21e970cdd75279f42b10f8aa9f0b161f, type: 3}
+  - {fileID: 8300000, guid: c4d33feff4005014093e1bc4aabd4f1b, type: 3}
+  - {fileID: 8300000, guid: 66c26a46bb11fb1488e2679ad0f9e895, type: 3}
+  - {fileID: 8300000, guid: 0e469869a5309634488b1d0090505d46, type: 3}

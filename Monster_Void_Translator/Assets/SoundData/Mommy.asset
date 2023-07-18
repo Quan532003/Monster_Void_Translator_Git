@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: Mommy
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: 7cf3e0811355a664b9ceabf9797bba1c, type: 3}
+  - {fileID: 8300000, guid: c3673942b6d7fb9469f6c4888a05376c, type: 3}
+  - {fileID: 8300000, guid: 77319d842526d3249b99ecf2407fca9c, type: 3}
+  - {fileID: 8300000, guid: 90b9a5be043ef814a898211b70651f6a, type: 3}
+  - {fileID: 8300000, guid: c32d7444eac78dd4485c158cf280ad8e, type: 3}

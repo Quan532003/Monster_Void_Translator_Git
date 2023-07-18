@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: StingerFlyn
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: 84436128df40aaf40a46a141c8c00ec6, type: 3}
+  - {fileID: 8300000, guid: 5b508eac69af03f49a4e679b0ab69bde, type: 3}
+  - {fileID: 8300000, guid: fa9c5e55d8c55244197f07d3f263f556, type: 3}
+  - {fileID: 8300000, guid: 611a0ab7eb51644439e3cf4a5153c5e7, type: 3}

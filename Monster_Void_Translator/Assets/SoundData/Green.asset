@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: Green
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: a87cc5a2b7338084284b7be96c3b5013, type: 3}
+  - {fileID: 8300000, guid: 795e6457884861f4480ea09ec17cce3a, type: 3}
+  - {fileID: 8300000, guid: 12384aeaa7a6d794192d1f562ee81106, type: 3}

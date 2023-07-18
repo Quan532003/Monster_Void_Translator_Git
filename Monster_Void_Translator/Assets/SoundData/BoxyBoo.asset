@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: BoxyBoo
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: 075379adf63240d4ba289715319551fe, type: 3}
+  - {fileID: 8300000, guid: ae2cd74ce509aaa46a528419b3d64f0d, type: 3}
+  - {fileID: 8300000, guid: c33339cbfc7579a49b0fd760dedc31b6, type: 3}
+  - {fileID: 8300000, guid: 3e803277673d0914f88f897aa4d1727c, type: 3}
+  - {fileID: 8300000, guid: 69b42bee043569645bf5c30d132e5af1, type: 3}
+  - {fileID: 8300000, guid: 3fc564656b21b6247b3e5e22cb49a141, type: 3}

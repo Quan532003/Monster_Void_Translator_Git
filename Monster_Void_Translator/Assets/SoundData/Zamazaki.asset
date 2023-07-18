@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba6f5eb6416b1b54cbeb39583881b185, type: 3}
+  m_Name: Zamazaki
+  m_EditorClassIdentifier: 
+  monsterSounds:
+  - {fileID: 8300000, guid: e9878cbb00870de45b6373f16a17a86d, type: 3}
+  - {fileID: 8300000, guid: e4f6d4fc0c91d8441b550f12f9be3273, type: 3}
+  - {fileID: 8300000, guid: 8d6ad6006ce5ed74b991f91ca9bb69db, type: 3}
