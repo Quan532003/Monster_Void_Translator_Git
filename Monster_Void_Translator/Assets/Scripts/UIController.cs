@@ -34,8 +34,27 @@ public class UIController : MonoBehaviour
         modeTextInBtn[currentPopUp].color = Color.black;
         currentPopUp = index;
         modeText.text = tittle[index];
+        if(index == 0)
+        {
+            PopUpSoundController.Instance.SetLockSound();
+            PopUpSoundController.Instance.SetSoundBtnClicked();
+            Debug.Log("Set" + index);
+        }
+        if(index == 1)
+        {
+            Debug.Log("Set" + index);
+            PopUpTranslatorController.Instance.SetLockMonster();
+            PopUpTranslatorController.Instance.SetClickMonsterBtn();
+        }
+        if(index == 2)
+        {
+            Debug.Log("Set" + index);
+            PopUpInforController.Instance.SetLockBtn();
+            PopUpInforController.Instance.SetBtnMonsterClicked();
+        }
         if(index == 3)
         {
+            Debug.Log("Set" + index);
             PopUpHistoryController.Instance.SetListRecord();
         }
     }

@@ -25,7 +25,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public float waitTime = 0f;
     List<float> waitTimeInSelect = new List<float> { 0, 15, 30, 45, 60, 120, 300}; //15s, 30s, 45s, 1m, 2m, 5m
     public bool isLoop = false;
-    
+    List<GameObject> lockMonster = new List<GameObject>();
     private void Awake()
     {
         Instance = this;
@@ -33,7 +33,33 @@ public class PopUpTranslatorController : MonoBehaviour
         {
             monsterBtns.Add(contentsInScroll.GetChild(i).GetComponent<Button>());
         }
-        for(int i = 0; i < monsterBtns.Count; i++)
+        for (int i = 0; i < monsterBtns.Count; i++)
+        {
+            int index = i;
+            lockMonster.Add(monsterBtns[index].GetComponent<RectTransform>().GetChild(0).gameObject);
+        }
+        SetLockMonster();
+        SetClickMonsterBtn();
+        loopBtn.onClick.AddListener(OnLoopBtnClicked);
+        timerBtn.onClick.AddListener(OnTimerBtnClicked);
+        timerSelectDropDown.onValueChanged.AddListener(OnChangeValueInDropDown);
+    }
+
+    public void SetLockMonster()
+    {
+        for(int i =0; i < lockMonster.Count; i++)
+        {
+            lockMonster[i].SetActive(false);
+        }
+        var index = Helper.ConvertFromMonsterLockToInt();
+        for(int i = 0; i < index.Count; i++)
+        {
+            lockMonster[index[i]].SetActive(true);
+        }
+    }
+    public void SetClickMonsterBtn()
+    {
+        for (int i = 0; i < monsterBtns.Count; i++)
         {
             int index = i;
             monsterBtns[index].onClick.AddListener(() =>
@@ -41,17 +67,27 @@ public class PopUpTranslatorController : MonoBehaviour
                 OnMonsterBtnClicked(index);
             });
         }
-        loopBtn.onClick.AddListener(OnLoopBtnClicked);
-        timerBtn.onClick.AddListener(OnTimerBtnClicked);
-        timerSelectDropDown.onValueChanged.AddListener(OnChangeValueInDropDown);
     }
     void OnMonsterBtnClicked(int index)
     {
-        mainMonster.sprite = monsterAvatars[index];
-        PlayerData.currentMonster = index;
-        monsterName.text = "Monster" + index;
-        RecordController.Instance.playCover.SetActive(true);
-        RecordController.Instance.recordCover.SetActive(false);
+        if (!lockMonster[index].activeInHierarchy)
+        {
+            mainMonster.sprite = monsterAvatars[index];
+            PlayerData.currentMonster = index;
+            monsterName.text = "Monster" + index;
+            RecordController.Instance.playCover.SetActive(true);
+            RecordController.Instance.recordCover.SetActive(false);
+        }
+        else
+        {
+            lockMonster[index].SetActive(false);
+            Helper.SetLockMonster(index);
+            mainMonster.sprite = monsterAvatars[index];
+            PlayerData.currentMonster = index;
+            monsterName.text = "Monster" + index;
+            RecordController.Instance.playCover.SetActive(true);
+            RecordController.Instance.recordCover.SetActive(false);
+        }
     }
     public void OnLoopBtnClicked()
     {
@@ -70,5 +106,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public void OnChangeValueInDropDown(int index)
     {
         waitTime = waitTimeInSelect[index];
+        isLoop = false;
+        noticeLoop.SetActive(false);
     }
 }

@@ -43,20 +43,21 @@ public class PopUpInforController : MonoBehaviour
     List<int> widthOfContent = new List<int> { 1815,2300,2840,2410,2410,3755,1856,2485,1840,2250,3560,2110,
                                                 4515,1910,2400,2400,2700,1676,2500,2215,2215,2300};
     public Image monsterAvatar;
+    List<GameObject> lockInfor = new List<GameObject>();
+    public static PopUpInforController Instance;
     private void Awake()
     {
+        Instance = this;
         for(int i = 0; i < contentInfor.childCount; i++)
         {
             monsterSelect.Add(contentInfor.GetChild(i).GetComponent<Button>());
         }
         for(int i = 0; i < monsterSelect.Count; i++)
         {
-            int index = i;
-            monsterSelect[index].onClick.AddListener(() =>
-            {
-                OnSelectMonsterBtnClicked(index);
-            });
+            lockInfor.Add(monsterSelect[i].GetComponent<RectTransform>().GetChild(2).gameObject);
         }
+        SetLockBtn();
+        SetBtnMonsterClicked();
         closeBtn.onClick.AddListener(CloseBtnClicked);
         for(int i = 0; i < monsterSelect.Count; i++)
         {
@@ -68,13 +69,47 @@ public class PopUpInforController : MonoBehaviour
         }
     }
 
+    public void SetLockBtn()
+    {
+        for(int i =0; i < lockInfor.Count; i++)
+        {
+            lockInfor[i].SetActive(false);
+        }
+        var index = Helper.ConvertFromMonsterLockToInt();
+        for (int i = 0; i < index.Count; i++)
+        {
+            lockInfor[index[i]].SetActive(true);
+        }
+    }
+    public void SetBtnMonsterClicked()
+    {
+        for (int i = 0; i < monsterSelect.Count; i++)
+        {
+            int index = i;
+            monsterSelect[index].onClick.AddListener(() =>
+            {
+                OnSelectMonsterBtnClicked(index);
+            });
+        }
+    }
     void OnSelectMonsterBtnClicked(int index)
     {
-        monsterSelectPopUp.SetActive(false);
-        monsterInforPopUp.SetActive(true);
-        MonsterInfor infor = FileController.ReadFile(index);
-        SetTextAndAvatar(infor, index);
-
+        if (!lockInfor[index].activeInHierarchy)
+        {
+            monsterSelectPopUp.SetActive(false);
+            monsterInforPopUp.SetActive(true);
+            MonsterInfor infor = FileController.ReadFile(index);
+            SetTextAndAvatar(infor, index);
+        }
+        else
+        {
+            lockInfor[index].SetActive(false);
+            Helper.SetLockMonster(index);
+            monsterSelectPopUp.SetActive(false);
+            monsterInforPopUp.SetActive(true);
+            MonsterInfor infor = FileController.ReadFile(index);
+            SetTextAndAvatar(infor, index);
+        }
     }
 
     public void SetTextAndAvatar(MonsterInfor infor, int index)

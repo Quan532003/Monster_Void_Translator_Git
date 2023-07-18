@@ -13,7 +13,19 @@ public class PlayerData
     const string MonsterIndex = "MonsterIndex";
     const string SoundIndex = "SoundIndex";
     const string NumberRecordHistory = "NumberRecord";
+    const string LockMonster = "LockMonster";
 
+    public static string lockMonster
+    {
+        set
+        {
+            PlayerPrefs.SetString(LockMonster, value);
+        }
+        get
+        {
+            return PlayerPrefs.GetString(LockMonster, "2,3,4,5,10,16");
+        }
+    }
     public static int numberRecord
     {
         set

@@ -100,4 +100,31 @@ public class Helper
         DateTime now = DateTime.Now;
         return now.Day + "/" + now.Month + "/" + now.Year;
     }
+    public static List<int> ConvertFromMonsterLockToInt()
+    {
+        var lockMonsterStr = PlayerData.lockMonster;
+        string[] indexSplit = lockMonsterStr.Split(',');
+        List<int> index = new List<int>();
+        for(int i = 0;i < indexSplit.Length; i++)
+        {
+            index.Add(int.Parse(indexSplit[i]));
+        }
+        return index;
+    }
+    public static void SetLockMonster(int index)
+    {
+        var lockMonsterStr = PlayerData.lockMonster;
+        string[] indexSplit = lockMonsterStr.Split(',');
+        string strNewLock = "";
+        for (int i = 0; i < indexSplit.Length; i++)
+        {
+            int convert = int.Parse(indexSplit[i]);
+            if (convert != index)
+            {
+                strNewLock += (indexSplit[i] + ",");
+            }
+        }
+        strNewLock = strNewLock.Substring(0, strNewLock.Length - 1);
+        PlayerData.lockMonster = strNewLock;
+    }
 }
