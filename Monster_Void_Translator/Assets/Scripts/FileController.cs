@@ -25,7 +25,7 @@ public class FileController
         monsterInfor.gender = contents[2];
         monsterInfor.birthDay = contents[3];
         monsterInfor.Origin = contents[4];
-        monsterInfor.featuresAndStory = contents[5] + "\n" + contents[6];
+        monsterInfor.featuresAndStory = contents[5] + "\n \n" + contents[6];
         return monsterInfor;
     }
 }

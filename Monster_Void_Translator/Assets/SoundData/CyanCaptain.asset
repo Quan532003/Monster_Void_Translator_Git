@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: CyanCaptain
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: b6fb711165a40214bafb66daa268c896, type: 3}
   - {fileID: 8300000, guid: 7312cca531cf31940b32b1ffd926d26e, type: 3}
   - {fileID: 8300000, guid: 98a3ecb36bc161440bf73c80c51a5e7c, type: 3}
   - {fileID: 8300000, guid: a2c4e3c3263fa154c92eb2c48fa602d2, type: 3}

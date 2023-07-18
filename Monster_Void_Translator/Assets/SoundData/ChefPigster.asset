@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: ChefPigster
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: 8945e00d0275e504bb6449e0c3b48215, type: 3}
   - {fileID: 8300000, guid: 4fa5e38712a764e49b6750ddeef5cf5c, type: 3}
   - {fileID: 8300000, guid: 505d8ec212da3d54e81693a9f8104521, type: 3}

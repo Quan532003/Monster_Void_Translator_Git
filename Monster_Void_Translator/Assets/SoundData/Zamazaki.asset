@@ -15,4 +15,3 @@ MonoBehaviour:
   monsterSounds:
   - {fileID: 8300000, guid: e9878cbb00870de45b6373f16a17a86d, type: 3}
   - {fileID: 8300000, guid: e4f6d4fc0c91d8441b550f12f9be3273, type: 3}
-  - {fileID: 8300000, guid: 8d6ad6006ce5ed74b991f91ca9bb69db, type: 3}

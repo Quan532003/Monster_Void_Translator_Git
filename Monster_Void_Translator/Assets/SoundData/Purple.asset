@@ -13,6 +13,5 @@ MonoBehaviour:
   m_Name: Purple
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: a5d38eb468d99bb44a564c419a361dc4, type: 3}
   - {fileID: 8300000, guid: 33041b2cc35775a40a36b98f3937be75, type: 3}
   - {fileID: 8300000, guid: 28e8bfa859ca0694d9ad365420712ea7, type: 3}

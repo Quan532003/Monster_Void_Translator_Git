@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: NabNab
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: 2342978d0c41a6a46978c438f709526a, type: 3}
   - {fileID: 8300000, guid: 1d1396062429c6341ab8c47b033280e8, type: 3}
+  - {fileID: 8300000, guid: 3a5bf911f103535428e6aa3a6e488b8e, type: 3}

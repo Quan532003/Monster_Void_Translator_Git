@@ -23,7 +23,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public Dropdown timerSelectDropDown;
     public static PopUpTranslatorController Instance;
     public float waitTime = 0f;
-    List<float> waitTimeInSelect = new List<float> { 0, 30, 45, 60, 90, 120 };
+    List<float> waitTimeInSelect = new List<float> { 0, 15, 30, 45, 60, 120, 300}; //15s, 30s, 45s, 1m, 2m, 5m
     public bool isLoop = false;
     private void Awake()
     {

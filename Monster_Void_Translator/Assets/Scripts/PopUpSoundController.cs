@@ -7,7 +7,7 @@ public class PopUpSoundController : MonoBehaviour
 {
     public RectTransform content;
     List<Button> monsterSounds = new List<Button>();
-    
+    public List<AudioClip> sounds;
     private void Awake()
     {
         for(int i = 0; i < content.childCount; i++)
@@ -27,7 +27,7 @@ public class PopUpSoundController : MonoBehaviour
     {
         var soundListSO = SoundController.Instance.monsterSounds;
         var soundList = soundListSO[index].monsterSounds;
-        int randIndexSound = Random.Range(0, soundList.Count);
-        SoundController.Instance.PlaySound(index, randIndexSound);
+
+        SoundController.Instance.PlaySoundInSoundPopUp(sounds[index]);
     }
 }

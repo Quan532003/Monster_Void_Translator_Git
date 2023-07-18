@@ -13,7 +13,11 @@ public class SoundController : MonoBehaviour
         DontDestroyOnLoad(this.gameObject);
 
     }
-
+    public void PlaySoundInSoundPopUp(AudioClip clip)
+    {
+        source.clip = clip;
+        source.Play();
+    }
     public void PlaySound(int monsterIndex, int soundIndex)
     {
         var audioClip = monsterSounds[monsterIndex].monsterSounds[soundIndex];

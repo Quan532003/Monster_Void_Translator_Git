@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: SlowSeline
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: 4f05422de7f3e7640bd0aa4284d72602, type: 3}
   - {fileID: 8300000, guid: 4a4428c165879604cbafa5ad55724060, type: 3}
   - {fileID: 8300000, guid: a605c9522c62e2448b3fe9b0a0ac43d2, type: 3}
-  - {fileID: 8300000, guid: 3d83594d6edb14845aab37e4eb485bcf, type: 3}

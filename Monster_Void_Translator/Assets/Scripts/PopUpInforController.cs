@@ -87,7 +87,7 @@ public class PopUpInforController : MonoBehaviour
         monsterFeature.text = infor.featuresAndStory;
         textInTittle.text = infor.name;
         var contentSize = contentInShowInfor.sizeDelta;
-        contentSize.y = widthOfContent[index];
+        contentSize.y = widthOfContent[index] * 1.25f;
         contentInShowInfor.sizeDelta = contentSize;
         monsterAvatar.sprite = avatar[index];
     }

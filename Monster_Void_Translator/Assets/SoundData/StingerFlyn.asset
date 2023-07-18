@@ -13,7 +13,6 @@ MonoBehaviour:
   m_Name: StingerFlyn
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: 84436128df40aaf40a46a141c8c00ec6, type: 3}
   - {fileID: 8300000, guid: 5b508eac69af03f49a4e679b0ab69bde, type: 3}
   - {fileID: 8300000, guid: fa9c5e55d8c55244197f07d3f263f556, type: 3}
   - {fileID: 8300000, guid: 611a0ab7eb51644439e3cf4a5153c5e7, type: 3}

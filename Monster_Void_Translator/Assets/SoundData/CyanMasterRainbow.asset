@@ -13,7 +13,5 @@ MonoBehaviour:
   m_Name: CyanMasterRainbow
   m_EditorClassIdentifier: 
   monsterSounds:
-  - {fileID: 8300000, guid: add42f84716a534408ffe4bec4d4f8f8, type: 3}
   - {fileID: 8300000, guid: 0ec34a9c3329eb5449a16ada1d04d462, type: 3}
   - {fileID: 8300000, guid: a887c4ff44f371745be36110ca60a34f, type: 3}
-  - {fileID: 8300000, guid: 4a60721172cf7874c9806c8c555255ac, type: 3}

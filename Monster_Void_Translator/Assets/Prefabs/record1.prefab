@@ -780,6 +780,8 @@ MonoBehaviour:
   eraseBtn: {fileID: 2515764905646825678}
   playFill: {fileID: 7073563403955673586}
   isPlaying: 0
+  timePlay: 0
+  length: 0
 --- !u!1 &2515764905389533728
 GameObject:
   m_ObjectHideFlags: 0
@@ -1176,8 +1178,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 130.69, y: -38.64}
-  m_SizeDelta: {x: 237.22, y: 77.28}
+  m_AnchoredPosition: {x: 204.38867, y: -38.64}
+  m_SizeDelta: {x: 384.6173, y: 77.28}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &2515764906238144993
 CanvasRenderer:
@@ -1220,7 +1222,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Record1
+  m_Text: Record 01
 --- !u!1 &2515764906304334878
 GameObject:
   m_ObjectHideFlags: 0

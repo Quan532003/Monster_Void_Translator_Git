@@ -14,5 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   monsterSounds:
   - {fileID: 8300000, guid: a87cc5a2b7338084284b7be96c3b5013, type: 3}
-  - {fileID: 8300000, guid: 795e6457884861f4480ea09ec17cce3a, type: 3}
   - {fileID: 8300000, guid: 12384aeaa7a6d794192d1f562ee81106, type: 3}

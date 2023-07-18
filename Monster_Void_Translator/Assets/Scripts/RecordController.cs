@@ -13,7 +13,8 @@ public class RecordController : MonoBehaviour
     public Text timeCountDownTxt;
     bool played = false;
     public int indexSound;
-
+    public GameObject playCover;
+    public GameObject recordCover;
     bool isPlaying = false;
     bool isCountDown = false;
     float timePlay = 0f;
@@ -32,7 +33,7 @@ public class RecordController : MonoBehaviour
         if(isCountDown)
         {
             timeCountDown -= Time.deltaTime;
-            timeCountDownTxt.text = "The sound will be played after " + (int)timeCountDown + "";
+            timeCountDownTxt.text = "The sound will be played after " + Helper.ConvertToMinuteSecond((int)timeCountDown);
             if(timeCountDown <= 0)
             {
                 isCountDown = false;
@@ -67,11 +68,13 @@ public class RecordController : MonoBehaviour
     {
         recordBtn.gameObject.SetActive(false);
         stopRecordBtn.gameObject.SetActive(true);
+        playCover.SetActive(true);
         var soundList = SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds;
         indexSound = Random.Range(0, soundList.Count);
     }
     void OnStopRecordBtnClicked()
     {
+        playCover.SetActive(false);
         stopRecordBtn.gameObject.SetActive(false);
         recordBtn.gameObject.SetActive(true);
         SaveRecord.SaveDataRecord((int)SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds[indexSound].length, PlayerData.currentMonster, indexSound);
@@ -82,6 +85,7 @@ public class RecordController : MonoBehaviour
     {
         timeCountDown = PopUpTranslatorController.Instance.waitTime;
         isCountDown = true;
+        recordCover.SetActive(true);
         played = false;
         timePlay = 0f;
         fillInPlay.fillAmount = 0f;
@@ -98,7 +102,8 @@ public class RecordController : MonoBehaviour
         }
         else
             isPlaying = false;
-        SoundController.Instance.source.Stop(); 
+        SoundController.Instance.source.Stop();
+        recordCover.SetActive(false);
         timeCountDownTxt.gameObject.SetActive(false);
         playBtn.gameObject.SetActive(true);
         stopPlayBtn.gameObject.SetActive(false);
