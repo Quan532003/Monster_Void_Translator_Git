@@ -25,6 +25,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public float waitTime = 0f;
     List<float> waitTimeInSelect = new List<float> { 0, 15, 30, 45, 60, 120, 300}; //15s, 30s, 45s, 1m, 2m, 5m
     public bool isLoop = false;
+    
     private void Awake()
     {
         Instance = this;
@@ -49,6 +50,8 @@ public class PopUpTranslatorController : MonoBehaviour
         mainMonster.sprite = monsterAvatars[index];
         PlayerData.currentMonster = index;
         monsterName.text = "Monster" + index;
+        RecordController.Instance.playCover.SetActive(true);
+        RecordController.Instance.recordCover.SetActive(false);
     }
     public void OnLoopBtnClicked()
     {
@@ -66,8 +69,6 @@ public class PopUpTranslatorController : MonoBehaviour
 
     public void OnChangeValueInDropDown(int index)
     {
-        Debug.Log(timerSelectDropDown.options[index].text);
         waitTime = waitTimeInSelect[index];
-        Debug.Log(waitTime);
     }
 }

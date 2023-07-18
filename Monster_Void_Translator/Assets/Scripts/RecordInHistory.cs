@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -22,6 +23,7 @@ public class RecordInHistory : MonoBehaviour
     public bool isPlaying = false;
     public float timePlay = 0;
     public float length;
+    float timeVibration = 0f;
     public void SetTextInRecord()
     {
         recordDayTxt.text = Helper.GetRecordDay() ;
@@ -34,10 +36,16 @@ public class RecordInHistory : MonoBehaviour
         {
             timePlay += Time.deltaTime;
             playFill.fillAmount = timePlay / length;
+            if(timePlay - timeVibration >= 1f)
+            {
+                timeVibration = timePlay;
+                Handheld.Vibrate();
+            }
             if(timePlay > length)
             {
                 isPlaying = false;
                 timePlay = 0f;
+                timeVibration = 0f;
                 playBtn.gameObject.SetActive(true);
                 stopBtn.gameObject.SetActive(false);
             }
@@ -49,6 +57,7 @@ public class RecordInHistory : MonoBehaviour
     {
         playFill.fillAmount = 0f;
         timePlay = 0f;
+        timeVibration = 0f;
         playBtn.gameObject.SetActive(true);
         stopBtn.gameObject.SetActive(false);
     }

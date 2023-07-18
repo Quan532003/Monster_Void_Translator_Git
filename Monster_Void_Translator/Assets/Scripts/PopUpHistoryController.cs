@@ -61,6 +61,10 @@ public class PopUpHistoryController : MonoBehaviour
         }
         recordList.Clear();
         inforInRecord.Clear();
+
+        var contentSize = content.sizeDelta;
+        contentSize.y = 0;
+        content.sizeDelta = contentSize;
     }
     public void SetListRecord()
     {

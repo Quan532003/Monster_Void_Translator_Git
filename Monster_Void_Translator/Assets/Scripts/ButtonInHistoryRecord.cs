@@ -15,7 +15,6 @@ public class ButtonInHistoryRecord : MonoBehaviour
         var monsterIndex = PlayerData.GetMonsterIndex(index);
         var soundIndex = PlayerData.GetSoundIndex(index);
         SoundController.Instance.PlaySound(monsterIndex, soundIndex);
-        Debug.Log(monsterIndex + " " + soundIndex);
     }
     public void OnShareBtnInHistoryRecord(int index)
     {
