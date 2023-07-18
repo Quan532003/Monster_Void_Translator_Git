@@ -1,7 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using Mono.Cecil.Cil;
+using System;
+using System.Collections;
+using System.IO;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class ButtonInHistoryRecord : MonoBehaviour
 {
@@ -18,9 +19,20 @@ public class ButtonInHistoryRecord : MonoBehaviour
     }
     public void OnShareBtnInHistoryRecord(int index)
     {
-        Debug.Log(index);
+        StartCoroutine(TakeScreenshotAndShare(index));
     }
+    private IEnumerator TakeScreenshotAndShare(int index)
+    {
+        yield return new WaitForEndOfFrame();
+        byte[] wavData = Helper.EncodeToWAV(SoundController.Instance.monsterSounds[PlayerData.GetMonsterIndex(index)].monsterSounds[PlayerData.GetSoundIndex(index)]);
 
+        string filePath = Path.Combine(Application.temporaryCachePath, "shared_audio.wav");
+        File.WriteAllBytes(filePath, wavData);
+        new NativeShare().AddFile(filePath)
+        .SetSubject("Subject goes here").SetText("Hello world!").SetUrl("https://github.com/yasirkula/UnityNativeShare")
+        .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
+        .Share();
+    }
     public void OnEraseBtnInHistoryRecord(int index)
     {
         int numberRecord = PlayerData.numberRecord;

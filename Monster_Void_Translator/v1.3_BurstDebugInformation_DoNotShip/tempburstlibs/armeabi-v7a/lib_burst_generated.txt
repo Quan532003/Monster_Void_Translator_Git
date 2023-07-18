@@ -142,6 +142,7 @@ Library: lib_burst_generated
 --root-assembly=D:\Unity\MonsterVoidTranslatorFinal\Monster_Void_Translator_Git\Monster_Void_Translator\Temp\StagingArea\Data\Managed\Unity.2D.IK.Runtime.dll
 --root-assembly=D:\Unity\MonsterVoidTranslatorFinal\Monster_Void_Translator_Git\Monster_Void_Translator\Temp\StagingArea\Data\Managed\Unity.2D.Tilemap.Extras.dll
 --root-assembly=D:\Unity\MonsterVoidTranslatorFinal\Monster_Void_Translator_Git\Monster_Void_Translator\Temp\StagingArea\Data\Managed\Unity.InternalAPIEngineBridge.001.dll
+--root-assembly=D:\Unity\MonsterVoidTranslatorFinal\Monster_Void_Translator_Git\Monster_Void_Translator\Temp\StagingArea\Data\Managed\NativeShare.Runtime.dll
 --assembly-folder=D:\Unity\MonsterVoidTranslatorFinal\Monster_Void_Translator_Git\Monster_Void_Translator\Temp\StagingArea\Data\Managed\
 --pdb-search-paths=Temp/ManagedSymbols/
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
