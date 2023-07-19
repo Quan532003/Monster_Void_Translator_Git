@@ -16,6 +16,21 @@ public class PlayerData
     const string LockMonster = "LockMonster";
     const string NoAD = "NoAD";
     const string Rate = "Rate";
+    const string MonsterIndexInSoundPopUp = "MonsterInSound";
+
+
+
+    public static int monsterIndexInSound
+    {
+        set
+        {
+            PlayerPrefs.SetInt(MonsterIndexInSoundPopUp, value);
+        }
+        get
+        {
+            return PlayerPrefs.GetInt(MonsterIndexInSoundPopUp, -1);
+        }
+    }
     public static int noAD
     {
         set

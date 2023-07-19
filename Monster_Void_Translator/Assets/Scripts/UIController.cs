@@ -16,6 +16,7 @@ public class UIController : MonoBehaviour
    
     private void Awake()
     {
+        Application.targetFrameRate = 60;
         for (int i = 0; i < modeButtons.Count; i++)
         {
             int index = i;
