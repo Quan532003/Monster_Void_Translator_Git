@@ -13,13 +13,24 @@ public class PlayerData
     const string MonsterIndex = "MonsterIndex";
     const string SoundIndex = "SoundIndex";
     const string NumberRecordHistory = "NumberRecord";
+    const string IdRecord = "IdRecord";
     const string LockMonster = "LockMonster";
     const string NoAD = "NoAD";
     const string Rate = "Rate";
     const string MonsterIndexInSoundPopUp = "MonsterInSound";
 
 
-
+    public static int idRecord
+    {
+        set
+        {
+            PlayerPrefs.SetInt(IdRecord, value);
+        }
+        get
+        {
+            return PlayerPrefs.GetInt(IdRecord, 0);
+        }
+    }
     public static int monsterIndexInSound
     {
         set

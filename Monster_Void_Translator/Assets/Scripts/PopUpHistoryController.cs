@@ -11,6 +11,7 @@ public class PopUpHistoryController : MonoBehaviour
     List<GameObject> inforInRecord = new List<GameObject>();
     public RectTransform content;
     public RecordInHistory recordPrefab;
+    public GameObject noticeText;
     public static PopUpHistoryController Instance;
     private void Awake()
     {
@@ -34,7 +35,7 @@ public class PopUpHistoryController : MonoBehaviour
             content.sizeDelta = contentSize;
             for (int i = index + 1; i < recordList.Count; i++)
             {
-                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, 1);
+                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, -200 * i);
             }
             
         }
@@ -48,7 +49,7 @@ public class PopUpHistoryController : MonoBehaviour
             content.sizeDelta = contentSize; 
             for (int i = index + 1; i < recordList.Count; i++)
             {
-                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, -1);
+                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, -200 * i - 300);
             }
             
         }
@@ -136,6 +137,11 @@ public class PopUpHistoryController : MonoBehaviour
                 SoundController.Instance.source.Stop();
             });
         }
+        if (recordList.Count == 0)
+        {
+            noticeText.SetActive(true);
+        }
+        else noticeText.SetActive(false);
     }
 
 }

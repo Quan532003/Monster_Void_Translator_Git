@@ -44,24 +44,24 @@ public class PopUpMovement : MonoBehaviour
         var hideRect = popUpHide.GetComponent<RectTransform>();
         if(leftToRight)
         {
-            showRect.anchoredPosition = new Vector3(-2 * widthScreen , 0, 0);
+            showRect.anchoredPosition = new Vector3(-2.6f * widthScreen , 0, 0);
             showRect.gameObject.SetActive(true);
             showRect.DOLocalMove(Vector3.zero, 0.3f);
-            hideRect.DOLocalMove(new Vector3(widthScreen * 2, 0, 0), 0.3f);
+            hideRect.DOLocalMove(new Vector3(widthScreen * 2.6f, 0, 0), 0.3f);
         }
         else
         {
-            showRect.anchoredPosition = new Vector3(widthScreen * 2, 0, 0);
+            showRect.anchoredPosition = new Vector3(widthScreen * 2.6f, 0, 0);
             showRect.gameObject.SetActive(true);
             showRect.DOLocalMove(Vector3.zero, 0.3f);
-            hideRect.DOLocalMove(new Vector3(-widthScreen * 2, 0, 0), 0.3f);
+            hideRect.DOLocalMove(new Vector3(-widthScreen * 2.6f, 0, 0), 0.3f);
         }
 
     }
 
-    public void RecordMove(GameObject record, int dir)
+    public void RecordMove(GameObject record, int y)
     {
         var rect = record.GetComponent<RectTransform>();
-        rect.DOLocalMoveY(rect.localPosition.y + dir * recordContentSize, 0.3f);
+        rect.DOLocalMoveY(y, 0.3f);
     }
 }
