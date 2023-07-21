@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public class RecordController : MonoBehaviour
@@ -19,19 +20,19 @@ public class RecordController : MonoBehaviour
     bool isPlaying = false;
     bool isCountDown = false;
     float timePlay = 0f;
-    float timeCountDown;
+    public float timeCountDown;
     public GameObject recordImage;
     public GameObject playImage;
     private void Awake()
     {
         indexSound = 0;
         Instance = this;
-        recordBtn.onClick.AddListener(OnRecordBtnClicked);
-        stopRecordBtn.onClick.AddListener(OnStopRecordBtnClicked);
         playBtn.onClick.AddListener(OnPlayBtnClicked);
         stopPlayBtn.onClick.AddListener(OnStopPlayBtnClicked);
     }
     float timeVibration = 0f;
+
+    
     private void Update()
     {
         if(isCountDown)
@@ -77,30 +78,27 @@ public class RecordController : MonoBehaviour
         }
     }
 
-    void OnRecordBtnClicked()
+    public void OnRecordBtnClicked()
     {
         recordImage.SetActive(true);
         playImage.SetActive(false);
-        recordBtn.gameObject.SetActive(false);
-        stopRecordBtn.gameObject.SetActive(true);
         playCover.SetActive(true);
+        recordBtn.GetComponent<RectTransform>().localScale = Vector3.one * 0.7f;
         var soundList = SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds;
         indexSound = Random.Range(0, soundList.Count);
     }
-    void OnStopRecordBtnClicked()
+    public void OnStopRecordBtnClicked()
     {
         playImage.SetActive(false);
         recordImage.SetActive(false);
         playCover.SetActive(false);
-        stopRecordBtn.gameObject.SetActive(false);
-        recordBtn.gameObject.SetActive(true);
+        recordBtn.GetComponent<RectTransform>().localScale = Vector3.one;
         SaveRecord.SaveDataRecord((int)SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds[indexSound].length, PlayerData.currentMonster, indexSound);
         PlayerData.numberRecord++;
     }
 
-    void OnPlayBtnClicked()
+    public void OnPlayBtnClicked()
     {
-        
         timeCountDown = PopUpTranslatorController.Instance.waitTime;
         isCountDown = true;
         recordCover.SetActive(true);
@@ -113,7 +111,7 @@ public class RecordController : MonoBehaviour
         stopPlayBtn.gameObject.SetActive(true);
 
     }
-    void OnStopPlayBtnClicked()
+    public void OnStopPlayBtnClicked()
     {
         if(isCountDown)
         {
