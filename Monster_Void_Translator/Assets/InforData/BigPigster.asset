@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: BigPigster
+  m_EditorClassIdentifier: 
+  monsterName: Big pigster
+  nickName: The Four-Eyed
+  gender: Male
+  birthDay: September 2022
+  Origin: Garten of Banban III
+  featuresAndStory: '<b>Features:</b> Big Pigster is a purple pig with 4 eyes, 2
+    eyes on the top of the head and 2 eyes in the middle of the belly. Big Pigster
+    has a nose between two pairs of eyes, two small ears on top of its head and a
+    wide mouth with 10 teeth.
+
+
+    <b>Story:</b> Big Pigster can get bigger when
+    he eats more food.'
+  contentHeight: 1687

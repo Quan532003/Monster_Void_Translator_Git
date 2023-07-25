@@ -3,5 +3,5 @@ Unknown
 Male
 Rainbow Friend
 2022
-Features: Yellow is a bird inspired monster who has a brown nest with a Helicopter-propeller, and two eyes with two long arms that seem to look like wings. He has sharp teeth, and has a pointed tail in his back. When he walks, he will keep his arms close together and stand tall, but when chasing after a player, Yellow will flap his wings with the mouth open and lean forward.
-Story: Unknown
+<b>Features:</b> Yellow is a bird inspired monster who has a brown nest with a Helicopter-propeller, and two eyes with two long arms that seem to look like wings. He has sharp teeth, and has a pointed tail in his back. When he walks, he will keep his arms close together and stand tall, but when chasing after a player, Yellow will flap his wings with the mouth open and lean forward.
+<b>Story:</b> Unknown

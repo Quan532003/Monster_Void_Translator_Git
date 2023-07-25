@@ -13,12 +13,13 @@ public class SoundPlayEachMonster : MonoBehaviour
     public Image fillPlay;
     public Dropdown timerSelector;
     public GameObject settingPopUp;
-
+    public Image monsterImage;
     List<int> timeWaitList = new List<int>
     {
         0, 15, 30, 45, 60, 120, 300
     };
     public List<AudioClip> sounds = new List<AudioClip>();
+    public List<Sprite> monsterAvatar = new List<Sprite>();
     public Image timeFill;
     public GameObject timeInPlay;
     public GameObject noticeInLoop;
@@ -31,14 +32,6 @@ public class SoundPlayEachMonster : MonoBehaviour
     bool played = false;
     public Text noticeTimeCountDown;
     public Text nameTxt;
-    List<string> nameList = new List<string>
-    {
-        "Baby Opila Birds", "Bunbuleena","Bunbun","Blue", "Boogie","Boxy Box",
-        "Big pigster","Cap Fiddless","Syan",
-        "Green", "New wuggy", "Jubo Jesh", "Mommy Mommy",
-        "Nubnub", "Orange", "Purple", "Skubidu", "Slow Slainy",
-        "Mr.Stinger", "Tarta", "Yellow", "Zamazaki & Zamataki"
-    };
     int waitIndex;
     private void Awake()
     {
@@ -63,9 +56,13 @@ public class SoundPlayEachMonster : MonoBehaviour
         timeInPlay.SetActive(false);
         SoundController.Instance.source.Stop();
     }
+    public void SetSprite()
+    {
+        monsterImage.sprite = monsterAvatar[PlayerData.monsterIndexInSound];
+    }
     public void SetName()
     {
-        nameTxt.text = nameList[PlayerData.monsterIndexInSound];
+        nameTxt.text = Helper.monsterName[PlayerData.monsterIndexInSound];
     }
     private void Update()
     {

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: Tarta
+  m_EditorClassIdentifier: 
+  monsterName: Tarta
+  nickName: Unknown
+  gender: Male
+  birthDay: May 5, 2023
+  Origin: Garten of Banban III
+  featuresAndStory: '<b>Features:</b> Tarta is the father of Baby Opila Bird. Tarta''s
+    body is light green. His wings, legs, and beak are pink.
+
+
+    <b>Story:</b>
+    Tarta Bird has a monster form in addition to its normal gentle form. Tarta''s
+    Monster form aside from the feathers on his head which are pink like wings and
+    beaks, Tarta also has glowing Cyan eyes instead of white.'
+  contentHeight: 1687

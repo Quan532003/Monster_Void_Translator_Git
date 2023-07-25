@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: Green
+  m_EditorClassIdentifier: 
+  monsterName: Green
+  nickName: Unknown
+  gender: Male
+  birthDay: 2022
+  Origin: Rainbow Friend
+  featuresAndStory: '<b>Features:</b> Green is a lanky, green tall monster with googly
+    eyes and sharp teeth. His body is mostly cylindrical and he has long rubbery
+    arms and fingers. He has two legs which is shorter in contrast to his arms.
+
+
+    <b>Story:</b>
+    Green is quite friendly with humans. Green is blind so he has to rely on his
+    senses such as hearing and touch. Green is Blue''s best friend. Green is a monster
+    who always puts friendship first.'
+  contentHeight: 1687

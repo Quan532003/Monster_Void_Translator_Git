@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: BabyOpila
+  m_EditorClassIdentifier: 
+  monsterName: Baby Opila
+  nickName: The Bird
+  gender: Male
+  birthDay: March 3, 2023
+  Origin: Garten of Banban II
+  featuresAndStory: '<b>Features:</b>  Green with purple accents on the wings, eyes
+    and feathers on the top of the head and has a cut on the neck.
+
+
+    <b>Story:</b>
+    Baby Bird Opila is the child of Bird Opila. Baby Opila Birds has five brothers,
+    while the Baby Opila Birds look like their mother in miniature, the Baby Opila
+    Birds look like their father, Tarta Bird.'
+  contentHeight: 1687

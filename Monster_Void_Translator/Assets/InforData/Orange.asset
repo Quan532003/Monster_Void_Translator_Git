@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: Orange
+  m_EditorClassIdentifier: 
+  monsterName: Orange
+  nickName: Unknown
+  gender: Male
+  birthDay: 2022
+  Origin: Rainbow Friend
+  featuresAndStory: '<b>Features:</b> Orange is an orange reptilian Rainbow Friend
+    reminiscent of a gecko. He is characterized by two bulging eyes and two rows
+    of sharp conical teeth lining his elongated jaws. When running, he appears anthropomorphic
+    and makes a pitter-patter sound whilst walking on his hind legs with his arms
+    stretched out.
+
+
+    <b>Story:</b> Orange appears to be the most violent of the
+    Rainbow Friends, getting angry if he isn''t fed and running around the place
+    when this happens, attacking anything in his path.'
+  contentHeight: 1800

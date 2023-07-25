@@ -6,7 +6,13 @@ using UnityEngine;
 
 public class Helper
 {
-    
+    public static List<string> monsterName = new List<string>
+    {   "Skubidu","Bunbun", "Blue","New wuggy","Bunbuleena","Big pigster","Nubnub",
+        "Boxy Box","Cap Fiddless","Jubo Jesh","Baby Opila Birds",
+         "Yellow","Syan",   "Mommy Mommy", "Green","Orange", "Slow Slainy", "Purple",
+        "Mr.Stinger", "Tarta", "Boogie","Zamazaki & Zamataki"
+    };
+
     public static byte[] EncodeToWAV(AudioClip audioClip)
     {
         // Chuyển đổi âm thanh thành mảng float
@@ -103,9 +109,10 @@ public class Helper
     public static List<int> ConvertFromMonsterLockToInt()
     {
         var lockMonsterStr = PlayerData.lockMonster;
+        if (lockMonsterStr == "") return new List<int>();
         string[] indexSplit = lockMonsterStr.Split(',');
         List<int> index = new List<int>();
-        for(int i = 0;i < indexSplit.Length; i++)
+        for(int i = 0; i < indexSplit.Length; i++)
         {
             index.Add(int.Parse(indexSplit[i]));
         }
@@ -124,7 +131,11 @@ public class Helper
                 strNewLock += (indexSplit[i] + ",");
             }
         }
-        strNewLock = strNewLock.Substring(0, strNewLock.Length - 1);
-        PlayerData.lockMonster = strNewLock;
+        if (strNewLock.Length == 0) PlayerData.lockMonster = "";
+        else
+        {
+            strNewLock = strNewLock.Substring(0, strNewLock.Length - 1);
+            PlayerData.lockMonster = strNewLock;
+        }
     }
 }

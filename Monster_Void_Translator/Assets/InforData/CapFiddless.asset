@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: CapFiddless
+  m_EditorClassIdentifier: 
+  monsterName: Cap Fiddless
+  nickName: Child-Monkey
+  gender: Male
+  birthDay: September 2022
+  Origin: Garten of Banban III
+  featuresAndStory: '<b>Features:</b> Cap Fiddless is a dwarven, purple figure with
+    his face resting on his chest; His face consists of two small eyes that always
+    look to the right and a mouth with two sharp teeth located in the lower jaw.
+
+
+    <b>Story:</b>
+    Cap Fiddless has many variations with different colors such as Aqua Fiddless,
+    Magenta Fiddless, Orange Fiddless, Brown Fiddless, Yellow Fiddless, Forest Fiddless,
+    Red Fiddless. Each Fiddless variant will have different identity and personality
+    traits. Variants of Fiddless seem to be dead, with the exception of Aqua Fiddless.'
+  contentHeight: 2030

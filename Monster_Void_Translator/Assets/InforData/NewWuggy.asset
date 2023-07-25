@@ -1,0 +1,40 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: NewWuggy
+  m_EditorClassIdentifier: 
+  monsterName: New wuggy
+  nickName: Unknown
+  gender: Male
+  birthDay: 1984
+  Origin: Poppy playtime
+  featuresAndStory: '<b>Features:</b> New Wuggy is a tall, slender creature covered
+    in thick, bright blue fur. His arms and legs are several feet in length and end
+    in large yellow hands and feet. The hands have large Velcro straps on them, and
+    the feet possess four digits including thumbs, though they are fused together.
+    His head is large and contains two large black, dilated eyes. New Wuggy eyes
+    resemble googly eyes, and his mouth has rows of sharp teeth concealed by bright
+    red lips. New Wuggy wears a light-blue ribbon on his chest, and his head and
+    torso seem to have visible stitching on them. Closer observation of Wuggy''s
+    mouth shows a secondary set of jaws located by his throat, akin to that of a
+    Moray Eel.
+
+
+    <b>Story:</b> New Wuggy''s appearance exudes warmth and friendliness
+    but he is a murderous creature, slaughtering anyone he encounters. Wuggy constantly
+    wears a deranged toothy smile, suggestive that he enjoys hunting his victims
+    (or more simply that his anatomy prevents him from not smiling). When Huggy catches
+    the player, he bites into their face, killing them. New Wuggy was created as
+    a security guard for a toy factory in 1984 by unethical and illegal experiments.
+    However, on August 8, 1995, New Wuggy killed many scientists and workers at the
+    factory.'
+  contentHeight: 3380

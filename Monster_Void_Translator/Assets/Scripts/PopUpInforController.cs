@@ -18,39 +18,34 @@ public class PopUpInforController : MonoBehaviour
     public Text monsterFeature;
 
     public List<Sprite> avatar = new List<Sprite>();
+    public List<Sprite> cardAvatar = new List<Sprite>();
 
     public Button closeBtn;
     public Text textInTittle;
 
-    public List<Text> monsterNames = new List<Text>();
     public RectTransform contentInShowInfor;
-    List<string> nameTxt = new List<string>
-    {
-        "Baby Opila Birds",
-        "Bunbuleena",
-        "Bunbun",
-        "Blue",
-        "Boogie",
-        "Boxy Box",
-        "Big pigster",
-        "Cap Fiddless",
-        "Syan",
-        "Green", "New wuggy", "Jubo Jesh", "Mommy Mommy",
-        "Nubnub", "Orange", "Purple", "Skubidu", "Slow Slainy",
-        "Mr.Stinger", "Tarta", "Yellow", "Zamazaki & Zamataki"
-    };
+    public List<MonsterInforSO> monsterInfor = new List<MonsterInforSO>();
 
-    List<int> widthOfContent = new List<int> { 1815,2300,2840,2410,2410,3755,1856,2485,1840,2250,3560,2110,
-                                                4515,1910,2400,2400,2700,1676,2500,2215,2215,2300};
     public Image monsterAvatar;
     List<GameObject> lockInfor = new List<GameObject>();
     public static PopUpInforController Instance;
+
+
+    [SerializeField] List<Text> monsterNameInSceneSelect = new List<Text>();
+    [SerializeField] List<Image> avataMonsterInSeclect = new List<Image>();
     private void Awake()
     {
         Instance = this;
         for(int i = 0; i < contentInfor.childCount; i++)
         {
             monsterSelect.Add(contentInfor.GetChild(i).GetComponent<Button>());
+            monsterNameInSceneSelect.Add(monsterSelect[i].GetComponent<RectTransform>().GetChild(0).GetComponent<Text>());
+            avataMonsterInSeclect.Add(monsterSelect[i].GetComponent<RectTransform>().GetChild(1).GetComponent<Image>());
+        }
+        for(int i = 0; i < monsterNameInSceneSelect.Count; i++)
+        {
+            monsterNameInSceneSelect[i].text = Helper.monsterName[i];
+            avataMonsterInSeclect[i].sprite = cardAvatar[i];
         }
         for(int i = 0; i < monsterSelect.Count; i++)
         {
@@ -59,14 +54,6 @@ public class PopUpInforController : MonoBehaviour
         SetLockBtn();
         SetBtnMonsterClicked();
         closeBtn.onClick.AddListener(CloseBtnClicked);
-        for(int i = 0; i < monsterSelect.Count; i++)
-        {
-            monsterNames.Add(monsterSelect[i].GetComponent<RectTransform>().GetChild(0).GetComponent<Text>());
-        }
-        for(int i =0; i < monsterNames.Count; i++)
-        {
-            monsterNames[i].text = nameTxt[i];
-        }
     }
 
     public void SetLockBtn()
@@ -98,31 +85,35 @@ public class PopUpInforController : MonoBehaviour
         {
             monsterSelectPopUp.SetActive(false);
             monsterInforPopUp.SetActive(true);
-            MonsterInfor infor = FileController.ReadFile(index);
-            SetTextAndAvatar(infor, index);
+            var anchorPos = contentInShowInfor.anchoredPosition;
+            anchorPos.y = 0;
+            contentInShowInfor.anchoredPosition = anchorPos;
+            SetTextAndAvatar(index);
         }
         else
         {
             lockInfor[index].SetActive(false);
             Helper.SetLockMonster(index);
             monsterSelectPopUp.SetActive(false);
-            monsterInforPopUp.SetActive(true);
-            MonsterInfor infor = FileController.ReadFile(index);
-            SetTextAndAvatar(infor, index);
+            monsterInforPopUp.SetActive(true); 
+            var anchorPos = contentInShowInfor.anchoredPosition;
+            anchorPos.y = 0;
+            contentInShowInfor.anchoredPosition = anchorPos;
+            SetTextAndAvatar(index);
         }
     }
 
-    public void SetTextAndAvatar(MonsterInfor infor, int index)
+    public void SetTextAndAvatar(int index)
     {
-        monsterName.text = infor.name;
-        monsterNickName.text = infor.nickName;
-        monsterBirthDay.text = infor.birthDay;
-        monsterOrigin.text = infor.Origin;
-        monsterGender.text = infor.gender;
-        monsterFeature.text = infor.featuresAndStory;
-        textInTittle.text = infor.name;
+        monsterName.text = monsterInfor[index].monsterName;
+        monsterNickName.text = monsterInfor[index].nickName;
+        monsterBirthDay.text = monsterInfor[index].birthDay;
+        monsterOrigin.text = monsterInfor[index].Origin;
+        monsterGender.text = monsterInfor[index].gender;
+        monsterFeature.text = monsterInfor[index].featuresAndStory;
+        textInTittle.text = monsterInfor[index].monsterName;
         var contentSize = contentInShowInfor.sizeDelta;
-        contentSize.y = widthOfContent[index] * 1f;
+        contentSize.y = monsterInfor[index].contentHeight * 1f;
         contentInShowInfor.sizeDelta = contentSize;
         monsterAvatar.sprite = avatar[index];
     }

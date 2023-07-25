@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: Yellow
+  m_EditorClassIdentifier: 
+  monsterName: Yellow
+  nickName: Unknown
+  gender: Male
+  birthDay: 2022
+  Origin: Rainbow Friend
+  featuresAndStory: '<b>Features:</b> Yellow is a bird inspired monster who has a
+    brown nest with a Helicopter-propeller, and two eyes with two long arms that
+    seem to look like wings. He has sharp teeth, and has a pointed tail in his back.
+    When he walks, he will keep his arms close together and stand tall, but when
+    chasing after a player, Yellow will flap his wings with the mouth open and lean
+    forward.
+
+
+    <b>Story:</b> Unknown'
+  contentHeight: 1687

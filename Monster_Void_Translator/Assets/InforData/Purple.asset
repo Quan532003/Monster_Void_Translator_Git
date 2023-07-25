@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: Purple
+  m_EditorClassIdentifier: 
+  monsterName: Purple
+  nickName: Unknown
+  gender: Male
+  birthDay: 2022
+  Origin: Rainbow Friend
+  featuresAndStory: '<b>Features:</b> He is purple with long limbs and his whole
+    body is lanky.
+
+
+    <b>Story:</b> Like all the other Rainbow Friends, despite
+    being a bit of a monster he still has a bit of humanity in him.He is shown to
+    be loyal to his friends. Purple usually lives in the sewers and follows people,
+    and due to his ability to fit into sewers, he knows the place like the back of
+    his hand. However, he has shown to dislike his form due to him seeing it as crawling
+    around like rat in the sewer.'
+  contentHeight: 1687

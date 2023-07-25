@@ -11,7 +11,7 @@ public class RecordInHistory : MonoBehaviour
     public int recordLength;
     public int monsterIndex;
     public int soundIndex;
-
+    public GameObject playImage;
     public Text recordNameTxt;
     public Text recordDayTxt;
     public Text recordLengthTxt;

@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
+  m_Name: MommyMommy
+  m_EditorClassIdentifier: 
+  monsterName: Mommy Mommy
+  nickName: Unknown
+  gender: Female
+  birthDay: 1991
+  Origin: Poppy playtime
+  featuresAndStory: '<b>Features:</b> Mommy Mommy is a large, slender creature bearing
+    an uncanny resemblance to a spider, with only four limbs. She has baby pink skin
+    with curly, tangled noodle-like hot pink hair, styled into a high ponytail using
+    a baby blue hair tie. Her face consists of a pair of wide-set green eyes with
+    tiny pupils and three eyelashes, as well as a gaping, hollow mouth. Dark pink
+    lipstick can be seen adorning her mouth, and she has no nose. A thin neck with
+    a baby blue necklace connects her head to her body, which is comprised of a small
+    angular torso with a dark pink sweetheart neckline, a thin appendage resembling
+    her ''waist'', and a rotund dark pink bottom to resemble a sweetheart-bodice
+    dress. Her four limbs are all extremely elastic, capable of stretching ''hundreds
+    of feet'' according to the Transfer Request. Her arms end in two crimson glove-like
+    hands with thin baby blue cuffs, while her legs end in ankle-length baby blue
+    stockings with crimson Mary Janes.
+
+
+    <b>Story:</b> Moomy has two form: Normal
+    and Deranged In her deranged form, Mommy''s eyes are now completely dilated,
+    giving off an unhinged vibe. Her irises have also faded to a pale artichoke.
+    She will also no longer blink. Her hair is now twisted and mangled, no longer
+    the neat curls in her previous form. Her hands are enlarged maniacally, and her
+    fingers are splayed and elongated to resemble claws. Her body is also twisted.'
+  contentHeight: 3990

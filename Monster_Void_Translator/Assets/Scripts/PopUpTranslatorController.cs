@@ -27,6 +27,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public bool isLoop = false;
     List<GameObject> lockMonster = new List<GameObject>();
     int indexWait = 0;
+    
     private void Awake()
     {
         Instance = this;
@@ -45,7 +46,11 @@ public class PopUpTranslatorController : MonoBehaviour
         timerBtn.onClick.AddListener(OnTimerBtnClicked);
         timerSelectDropDown.onValueChanged.AddListener(OnChangeValueInDropDown);
     }
+    private void Start()
+    {
 
+        OnMonsterBtnClicked(PlayerData.currentMonster);
+    }
     public void SetLockMonster()
     {
         for(int i =0; i < lockMonster.Count; i++)
@@ -75,7 +80,7 @@ public class PopUpTranslatorController : MonoBehaviour
         {
             mainMonster.sprite = monsterAvatars[index];
             PlayerData.currentMonster = index;
-            monsterName.text = "Monster" + index;
+            monsterName.text = Helper.monsterName[index];
             RecordController.Instance.playCover.SetActive(true);
             RecordController.Instance.recordCover.SetActive(false);
         }
@@ -85,7 +90,7 @@ public class PopUpTranslatorController : MonoBehaviour
             Helper.SetLockMonster(index);
             mainMonster.sprite = monsterAvatars[index];
             PlayerData.currentMonster = index;
-            monsterName.text = "Monster" + index;
+            monsterName.text = Helper.monsterName[index];
             RecordController.Instance.playCover.SetActive(true);
             RecordController.Instance.recordCover.SetActive(false);
         }

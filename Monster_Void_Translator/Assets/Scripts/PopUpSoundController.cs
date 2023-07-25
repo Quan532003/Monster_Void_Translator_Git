@@ -55,6 +55,7 @@ public class PopUpSoundController : MonoBehaviour
             SoundEachMonster.gameObject.SetActive(true);
             SoundEachMonster.ResetLoopAndTimePlay();
             SoundEachMonster.SetName();
+            SoundEachMonster.SetSprite();
         }
         else
         {
@@ -63,6 +64,7 @@ public class PopUpSoundController : MonoBehaviour
             SoundEachMonster.gameObject.SetActive(true); 
             SoundEachMonster.ResetLoopAndTimePlay();
             SoundEachMonster.SetName();
+            SoundEachMonster.SetSprite();
             Helper.SetLockMonster(index);
         }
     }

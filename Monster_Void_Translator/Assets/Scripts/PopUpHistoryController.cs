@@ -19,15 +19,18 @@ public class PopUpHistoryController : MonoBehaviour
         
         SetClickedBtn();
     }
+    bool canChoseRecord = true;
     void OnRecordClicked(int index)
-    { 
+    {
+        if (!canChoseRecord) return;
+        canChoseRecord = false;
         var rect = inforInRecord[index].GetComponent<RectTransform>();
         if(rect.gameObject.activeInHierarchy)
         {
-            rect.DOScaleY(0, 0.3f).OnComplete(()=>
+            rect.DOScaleY(0, 0.301f).OnComplete(()=>
             {
                 rect.gameObject.SetActive(false);
-                
+                canChoseRecord = true;
             });
 
             var contentSize = content.sizeDelta;
@@ -35,21 +38,22 @@ public class PopUpHistoryController : MonoBehaviour
             content.sizeDelta = contentSize;
             for (int i = index + 1; i < recordList.Count; i++)
             {
-                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, -200 * i);
+                float y = recordList[i].GetComponent<RectTransform>().anchoredPosition.y;
+                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, (int)y + 300);
             }
-            
         }
         else
         {
             rect.localScale = new Vector3(1, 0, 0);
             rect.gameObject.SetActive(true);
-            rect.DOScaleY(1, 0.3f);
+            rect.DOScaleY(1, 0.301f).OnComplete(() => { canChoseRecord = true; });
             var contentSize = content.sizeDelta;
             contentSize.y += 300f;
             content.sizeDelta = contentSize; 
             for (int i = index + 1; i < recordList.Count; i++)
             {
-                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, -200 * i - 300);
+                float y = recordList[i].GetComponent<RectTransform>().anchoredPosition.y;
+                PopUpMovement.Instance.RecordMove(recordList[i].gameObject, (int)y - 300);
             }
             
         }
@@ -124,6 +128,7 @@ public class PopUpHistoryController : MonoBehaviour
                 ButtonInHistoryRecord.Instance.OnPlayBtnInHistoryRecord(index);
                 recordList[index].stopBtn.gameObject.SetActive(true);
                 recordList[index].playBtn.gameObject.SetActive(false);
+                recordList[index].playImage.SetActive(true);
                 recordList[index].isPlaying = true;
                 recordList[index].length = PlayerData.GetRecordLength(index);
                 recordList[index].timePlay = 0f;
@@ -134,6 +139,7 @@ public class PopUpHistoryController : MonoBehaviour
                 recordList[index].stopBtn.gameObject.SetActive(false);
                 recordList[index].playBtn.gameObject.SetActive(true);
                 recordList[index].isPlaying = false;
+                recordList[index].playImage.SetActive(false);
                 SoundController.Instance.source.Stop();
             });
         }

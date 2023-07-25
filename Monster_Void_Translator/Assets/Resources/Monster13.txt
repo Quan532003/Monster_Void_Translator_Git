@@ -3,5 +3,5 @@ Unknown
 Male
 Garten of Banban II
 March 3, 2023
-Features: Nubnub appears as a blue spider-like human with three eyes and a large mouth with several sharp teeth. In Nubnub's mouth there is also a tongue. Nubnub wears a monochrome birthday hat tilted to the left side of his head.
-Story: Unknown
+<b>Features:</b> Nubnub appears as a blue spider-like human with three eyes and a large mouth with several sharp teeth. In Nubnub's mouth there is also a tongue. Nubnub wears a monochrome birthday hat tilted to the left side of his head.
+<b>Story:</b> Unknown

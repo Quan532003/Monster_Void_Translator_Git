@@ -10,7 +10,7 @@ public class UIController : MonoBehaviour
     public List<GameObject> popUps = new List<GameObject>();
     public Text modeText;
     int currentPopUp = 1;
-    List<string> tittle = new List<string> { "Sound", "Translator", "Infor", "History" };
+    List<string> tittle = new List<string> { "Sound", "Translator", "Informations", "History" };
     public List<GameObject> activeBtn = new List<GameObject>();
     public List<GameObject> inActiveBtn = new List<GameObject>();
    
