@@ -12,8 +12,10 @@ public class TutorialTranslatorPopUp : MonoBehaviour
     [SerializeField] GameObject handRecord;
     [SerializeField] GameObject handPlay;
     [SerializeField] GameObject handMonsterDrag;
-    [SerializeField] Text tutorialRecordAndPlayText;
-    [SerializeField] Text selectMonsterText;
+    [SerializeField] Text tutorialRecord;
+    [SerializeField] Text tutorialPlay;
+    [SerializeField] Text dragText;
+    [SerializeField] Text selectText;
     public static TutorialTranslatorPopUp Instance;
     [SerializeField] GameObject coverRecord;
     public bool isTutoring;
@@ -35,49 +37,52 @@ public class TutorialTranslatorPopUp : MonoBehaviour
             monsterSelectCover.SetActive(false);
             handRecord.SetActive(true);
             handPlay.SetActive(false);
-            tutorialRecordAndPlayText.gameObject.SetActive(true);
-            tutorialRecordAndPlayText.text = "Hold to record";
-            selectMonsterText.gameObject.SetActive(false);
+            tutorialRecord.gameObject.SetActive(true);
+            tutorialRecord.text = "Hold to record";
+            dragText.gameObject.SetActive(false);
+            selectText.gameObject.SetActive(false);
             handMonsterDrag.SetActive(false);
         }));
     }
     public void SetActiveTutorialRecord(bool active)
     {
         handRecord.SetActive(active);
-        tutorialRecordAndPlayText.gameObject.SetActive(active);
+        tutorialRecord.gameObject.SetActive(active);
     }
     public void TutorialPlay()
     {
         coverRecord.SetActive(true);
         handRecord.SetActive(false);
         handPlay.SetActive(true);
-        tutorialRecordAndPlayText.gameObject.SetActive(true);
-        tutorialRecordAndPlayText.text = "Tap to listen";
+        tutorialRecord.gameObject.SetActive(false);
+        tutorialPlay.gameObject.SetActive(true);
+        tutorialPlay.text = "Tap to listen";
     }
     public void SetActiveTutorialPlay(bool active)
     {
         handPlay.SetActive(active);
-        tutorialRecordAndPlayText.gameObject.SetActive(active);
+        tutorialPlay.gameObject.SetActive(active);
     }
     public void TutorialMonsterSelect()
     {
         monsterAndRecordCover.SetActive(false);
         handPlay.SetActive(false);
-        tutorialRecordAndPlayText.gameObject.SetActive(false);
+        tutorialPlay.gameObject.SetActive(false);
+        tutorialRecord.gameObject.SetActive(false);
         top.SetSiblingIndex(1);
         StartCoroutine(waitForSecond(1f, ()=>
         {
             handMonsterDrag.SetActive(true);
-            selectMonsterText.gameObject.SetActive(true);
             monsterSelectCover.SetActive(true);
-            selectMonsterText.text = "Drag to choose monster";
+            dragText.gameObject.SetActive(true);
+            dragText.text = "Drag to choose monster";
         }));
         
     }
     public void SetActiveTutorialMonster(bool active)
     {
         handMonsterDrag.SetActive(active);
-        selectMonsterText.gameObject.SetActive(active);
+        dragText.gameObject.SetActive(active);
     }
 
     public void EndTurorial()
@@ -85,7 +90,8 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         coverRecord.SetActive(false);
 
         handMonsterDrag.SetActive(false);
-        selectMonsterText.gameObject.SetActive(false);
+        dragText.gameObject.SetActive(false);
+        selectText.gameObject.SetActive(false);
         monsterSelectCover.SetActive(false);
         handSelectMonster.SetActive(false);
         top.SetSiblingIndex(0);
@@ -106,6 +112,7 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         if(PlayerData.tutorialTrans == 0)
         {
             handMonsterDrag.SetActive(false);
+            dragText.gameObject.SetActive(false);
         }
     }
     public void EndDrag()
@@ -114,9 +121,15 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         {
             monsterSelect.enabled = false;
             handMonsterDrag.SetActive(false);
-            selectMonsterText.text = "Tap to choose monster";
+            selectText.gameObject.SetActive(true);
+            dragText.gameObject.SetActive(false);
+            selectText.text = "Tap to choose monster";
 
             handSelectMonster.GetComponent<RectTransform>().position = FindMonsterInScreen();
+            selectText.GetComponent<RectTransform>().position = FindMonsterInScreen() - new Vector3(0, 1, 0);
+            var pos = selectText.GetComponent<RectTransform>().position;
+            pos.x = 0;
+            selectText.GetComponent<RectTransform>().position = pos;
             handSelectMonster.SetActive(true);
         }
         

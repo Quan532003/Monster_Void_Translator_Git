@@ -78,8 +78,12 @@ public class RecordController : MonoBehaviour
             {
                 timePlay = 0f;
                 fillInPlay.fillAmount = 0f;
-                if(!PopUpTranslatorController.Instance.isLoop)
+                if (!PopUpTranslatorController.Instance.isLoop)
+                {
                     OnStopPlayBtnClicked();
+
+                    Debug.Log("Test1");
+                }
                 else
                 {
                     OnPlayBtnClicked();
@@ -149,7 +153,7 @@ public class RecordController : MonoBehaviour
         timeCountDownTxt.gameObject.SetActive(false);
         playBtn.gameObject.SetActive(true);
         stopPlayBtn.gameObject.SetActive(false);
-        if (PlayerData.tutorialTrans == 0)
+        if (PlayerData.tutorialTrans == 0 && TutorialTranslatorPopUp.Instance.isTutoring)
         {
             TutorialTranslatorPopUp.Instance.TutorialMonsterSelect();
         }

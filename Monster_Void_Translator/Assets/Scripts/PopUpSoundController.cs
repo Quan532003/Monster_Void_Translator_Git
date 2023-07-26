@@ -67,5 +67,9 @@ public class PopUpSoundController : MonoBehaviour
             SoundEachMonster.SetSprite();
             Helper.SetLockMonster(index);
         }
+        if(PlayerData.tutorialSound == 0)
+        {
+            TutorialSound.Instance.TutorialPlaySound();
+        }
     }
 }

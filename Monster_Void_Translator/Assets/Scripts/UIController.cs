@@ -41,6 +41,10 @@ public class UIController : MonoBehaviour
         {
             PopUpSoundController.Instance.SetLockSound();
             PopUpSoundController.Instance.SetSoundBtnClicked();
+            if(PlayerData.tutorialSound == 0)
+            {
+                TutorialSound.Instance.TutorialSelectMonster();
+            }
         }
         if(index == 1)
         {
@@ -51,10 +55,19 @@ public class UIController : MonoBehaviour
         {
             PopUpInforController.Instance.SetLockBtn();
             PopUpInforController.Instance.SetBtnMonsterClicked();
+            if(PlayerData.tutorialInfor == 0)
+            {
+                TutorialInfor.Instance.TutorialSelect();
+            }
         }
         if(index == 3)
         {
             PopUpHistoryController.Instance.SetListRecord();
+            if(PlayerData.tutorialHistory == 0)
+            {
+                TutorialHistory.Instance.TutorialSelect();
+            }
         }
+
     }
 }

@@ -27,6 +27,7 @@ public class PopUpHistoryController : MonoBehaviour
         var rect = inforInRecord[index].GetComponent<RectTransform>();
         if(rect.gameObject.activeInHierarchy)
         {
+            if (PlayerData.tutorialHistory == 0) return;
             rect.DOScaleY(0, 0.301f).OnComplete(()=>
             {
                 rect.gameObject.SetActive(false);
@@ -41,6 +42,7 @@ public class PopUpHistoryController : MonoBehaviour
                 float y = recordList[i].GetComponent<RectTransform>().anchoredPosition.y;
                 PopUpMovement.Instance.RecordMove(recordList[i].gameObject, (int)y + 300);
             }
+            recordList[index].OnRecordClicked(index, true);
         }
         else
         {
@@ -55,7 +57,11 @@ public class PopUpHistoryController : MonoBehaviour
                 float y = recordList[i].GetComponent<RectTransform>().anchoredPosition.y;
                 PopUpMovement.Instance.RecordMove(recordList[i].gameObject, (int)y - 300);
             }
-            
+            recordList[index].OnRecordClicked(index, false);
+        }
+        if(PlayerData.tutorialHistory ==0)
+        {
+            TutorialHistory.Instance.TutorialPlay();
         }
     }
     void ResetListAndChildInContent()
@@ -74,6 +80,7 @@ public class PopUpHistoryController : MonoBehaviour
     public void SetListRecord()
     {
         ResetListAndChildInContent();
+        
         var numberRecord = PlayerData.numberRecord;
         for(int i = 0; i < numberRecord; i++)
         {
@@ -99,6 +106,13 @@ public class PopUpHistoryController : MonoBehaviour
             recordList.Add(recordIns);
         }
         SetClickedBtn();
+        if (PlayerData.tutorialHistory == 0)
+        {
+            TutorialHistory.Instance.playBtn = recordList[0].playBtn;
+            TutorialHistory.Instance.eraseBtn = recordList[0].eraseBtn;
+            TutorialHistory.Instance.shareBtn = recordList[0].shareBtn;
+            TutorialHistory.Instance.SetEnable();
+        }
     }
 
     void SetClickedBtn()
@@ -139,8 +153,12 @@ public class PopUpHistoryController : MonoBehaviour
                 recordList[index].stopBtn.gameObject.SetActive(false);
                 recordList[index].playBtn.gameObject.SetActive(true);
                 recordList[index].isPlaying = false;
-                recordList[index].playImage.SetActive(false);
+                recordList[index].playFill.fillAmount = 0f ;
                 SoundController.Instance.source.Stop();
+                if (PlayerData.tutorialHistory == 0)
+                {
+                    TutorialHistory.Instance.TutorialShare();
+                }
             });
         }
         if (recordList.Count == 0)

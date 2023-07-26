@@ -80,6 +80,10 @@ public class PopUpTranslatorController : MonoBehaviour
     }
     void OnMonsterBtnClicked(int index)
     {
+        if (PlayerData.tutorialTrans == 0 && TutorialTranslatorPopUp.Instance.isTutoring)
+        {
+            TutorialTranslatorPopUp.Instance.EndTurorial();
+        }
         if (!lockMonster[index].activeInHierarchy)
         {
             mainMonster.sprite = monsterAvatars[index];
@@ -101,10 +105,6 @@ public class PopUpTranslatorController : MonoBehaviour
             RecordController.Instance.OnStopPlayBtnClicked();
             RecordController.Instance.playCover.SetActive(true);
             RecordController.Instance.recordCover.SetActive(false);
-        }
-        if (PlayerData.tutorialTrans == 0 && TutorialTranslatorPopUp.Instance.isTutoring)
-        {
-            TutorialTranslatorPopUp.Instance.EndTurorial();
         }
     }
     public void OnLoopBtnClicked()

@@ -106,6 +106,10 @@ public class PopUpInforController : MonoBehaviour
             contentInShowInfor.anchoredPosition = anchorPos;
             SetTextAndAvatar(index);
         }
+        if(PlayerData.tutorialInfor == 0)
+        {
+            TutorialInfor.Instance.Tutorialback();
+        }
     }
 
     public void SetTextAndAvatar(int index)
@@ -145,6 +149,10 @@ public class PopUpInforController : MonoBehaviour
     }
     public void CloseBtnClicked()
     {
+        if(PlayerData.tutorialInfor== 0)
+        {
+            TutorialInfor.Instance.EndTutorial();
+        }
         monsterSelectPopUp.SetActive(true);
         monsterInforPopUp.SetActive(false);
     }

@@ -112,6 +112,7 @@ public class SoundPlayEachMonster : MonoBehaviour
         isCountDown = true;
         timeCountDown = 0f;
         noticeTimeCountDown.gameObject.SetActive(true);
+        TutorialSound.Instance.OnMonsterClicked();
     }
     public void OnExitMonsterBtn()
     {
@@ -123,11 +124,16 @@ public class SoundPlayEachMonster : MonoBehaviour
         played = false;
         timeInPlay.SetActive(false);
         SoundController.Instance.source.Stop();
+        if(PlayerData.tutorialSound == 0)
+        {
+            TutorialSound.Instance.TutorialBack();
+        }
     }    
     public void OnBackBtnClicked()
     {
         this.gameObject.SetActive(false);
         SoundController.Instance.source.Stop();
+        TutorialSound.Instance.EndTutorial();
     }
     public void OnSettingBtnClicked()
     {
