@@ -1,5 +1,7 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,11 +13,13 @@ public class PopUpInforController : MonoBehaviour
     public GameObject monsterSelectPopUp;
 
     public Text monsterName;
-    public Text monsterNickName;
     public Text monsterGender;
     public Text monsterBirthDay;
     public Text monsterOrigin;
     public Text monsterFeature;
+    public Text monsterStory;
+    [SerializeField] Image storyTittle;
+    [SerializeField] Image featureTittle;
 
     public List<Sprite> avatar = new List<Sprite>();
     public List<Sprite> cardAvatar = new List<Sprite>();
@@ -30,7 +34,8 @@ public class PopUpInforController : MonoBehaviour
     List<GameObject> lockInfor = new List<GameObject>();
     public static PopUpInforController Instance;
 
-
+    [SerializeField] RectTransform furture;
+    [SerializeField] RectTransform story;
     [SerializeField] List<Text> monsterNameInSceneSelect = new List<Text>();
     [SerializeField] List<Image> avataMonsterInSeclect = new List<Image>();
     private void Awake()
@@ -106,18 +111,38 @@ public class PopUpInforController : MonoBehaviour
     public void SetTextAndAvatar(int index)
     {
         monsterName.text = monsterInfor[index].monsterName;
-        monsterNickName.text = monsterInfor[index].nickName;
         monsterBirthDay.text = monsterInfor[index].birthDay;
         monsterOrigin.text = monsterInfor[index].Origin;
         monsterGender.text = monsterInfor[index].gender;
-        monsterFeature.text = monsterInfor[index].featuresAndStory;
+        monsterFeature.text = monsterInfor[index].features;
+        monsterStory.text = monsterInfor[index].story;
         textInTittle.text = monsterInfor[index].monsterName;
+        storyTittle.color = monsterInfor[index].colorTitle;
+        featureTittle.color = monsterInfor[index].colorTitle;
+
+
+        SetAnchorPosY(furture, monsterInfor[index].furturePosY);
+        SetAnchorPosY(story, monsterInfor[index].storyPosY);
+
+        SetSize(furture, monsterInfor[index].featureHeight);
+        SetSize(story, monsterInfor[index].storyHeight);
+        monsterAvatar.sprite = avatar[index];
         var contentSize = contentInShowInfor.sizeDelta;
         contentSize.y = monsterInfor[index].contentHeight * 1f;
         contentInShowInfor.sizeDelta = contentSize;
-        monsterAvatar.sprite = avatar[index];
     }
-
+    void SetAnchorPosY(RectTransform rect, int value)
+    {
+        var pos = rect.anchoredPosition;
+        pos.y = value;
+        rect.anchoredPosition = pos;
+    }
+    void SetSize(RectTransform rect, int value)
+    {
+        var rectSize = rect.sizeDelta;
+        rectSize.y = value;
+        rect.sizeDelta = rectSize;
+    }
     public void CloseBtnClicked()
     {
         monsterSelectPopUp.SetActive(true);

@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -27,13 +28,15 @@ public class PopUpTranslatorController : MonoBehaviour
     public bool isLoop = false;
     List<GameObject> lockMonster = new List<GameObject>();
     int indexWait = 0;
-    
+    [SerializeField] List<Sprite> avatarCard = new List<Sprite>();
+    [SerializeField] ScrollRect monsterSelectScroll;
     private void Awake()
     {
         Instance = this;
         for(int i = 0; i < contentsInScroll.childCount; i++)
         {
             monsterBtns.Add(contentsInScroll.GetChild(i).GetComponent<Button>());
+            monsterBtns[i].GetComponent<Image>().sprite = avatarCard[i];
         }
         for (int i = 0; i < monsterBtns.Count; i++)
         {
@@ -46,9 +49,10 @@ public class PopUpTranslatorController : MonoBehaviour
         timerBtn.onClick.AddListener(OnTimerBtnClicked);
         timerSelectDropDown.onValueChanged.AddListener(OnChangeValueInDropDown);
     }
+    
+
     private void Start()
     {
-
         OnMonsterBtnClicked(PlayerData.currentMonster);
     }
     public void SetLockMonster()
@@ -80,9 +84,12 @@ public class PopUpTranslatorController : MonoBehaviour
         {
             mainMonster.sprite = monsterAvatars[index];
             PlayerData.currentMonster = index;
-            monsterName.text = Helper.monsterName[index];
+            monsterName.text = Helper.monsterName[index]; 
+            RecordController.Instance.OnStopPlayBtnClicked();
             RecordController.Instance.playCover.SetActive(true);
             RecordController.Instance.recordCover.SetActive(false);
+            
+
         }
         else
         {
@@ -90,9 +97,14 @@ public class PopUpTranslatorController : MonoBehaviour
             Helper.SetLockMonster(index);
             mainMonster.sprite = monsterAvatars[index];
             PlayerData.currentMonster = index;
-            monsterName.text = Helper.monsterName[index];
+            monsterName.text = Helper.monsterName[index]; 
+            RecordController.Instance.OnStopPlayBtnClicked();
             RecordController.Instance.playCover.SetActive(true);
             RecordController.Instance.recordCover.SetActive(false);
+        }
+        if (PlayerData.tutorialTrans == 0 && TutorialTranslatorPopUp.Instance.isTutoring)
+        {
+            TutorialTranslatorPopUp.Instance.EndTurorial();
         }
     }
     public void OnLoopBtnClicked()
@@ -101,8 +113,13 @@ public class PopUpTranslatorController : MonoBehaviour
         if (noticeLoop.activeInHierarchy) noticeTimer.SetActive(false);
         isLoop = !isLoop;
         if (isLoop)
+        {
             waitTime = 0f;
-        else waitTime = waitTimeInSelect[indexWait];
+        }
+        else
+        {
+            waitTime = waitTimeInSelect[indexWait];
+        }
     }
 
     public void OnTimerBtnClicked()

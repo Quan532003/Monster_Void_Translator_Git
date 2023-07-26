@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Boogie
   m_EditorClassIdentifier: 
   monsterName: Boogie
-  nickName: Unknown
   gender: Unknown
   birthDay: 1993
   Origin: Poppy playtime
-  featuresAndStory: '<b>Features:</b> Boogie is a green robot toy. He has a green
-    head with black space for the eyes, which are yellow. For arms, they are mostly
-    claw machine-like, and has tank-like feet.
-
-
-    <b>Story:</b> Boogie, given
-    his name, is likely a passionate dancer or music lover. Boogie Bot was likely
-    made to bust moves, dance, and groove with children whenever music was played.
-    He was created to be both playful and delicate - traits that stole the heart
-    of his audience.'
-  contentHeight: 1687
+  features: Boogie is a green robot toy. He has a green head with black space for
+    the eyes, which are yellow. For arms, they are mostly claw machine-like, and
+    has tank-like feet.
+  story: Boogie, given his name, is likely a passionate dancer or music lover. Boogie
+    Bot was likely made to bust moves, dance, and groove with children whenever music
+    was played. He was created to be both playful and delicate - traits that stole
+    the heart of his audience.
+  contentHeight: 1674
+  featureHeight: 450
+  storyHeight: 520
+  furturePosY: -768
+  storyPosY: -1290
+  colorTitle: {r: 0.6431373, g: 0, b: 1, a: 1}

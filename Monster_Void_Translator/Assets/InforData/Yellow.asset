@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Yellow
   m_EditorClassIdentifier: 
   monsterName: Yellow
-  nickName: Unknown
   gender: Male
   birthDay: 2022
   Origin: Rainbow Friend
-  featuresAndStory: '<b>Features:</b> Yellow is a bird inspired monster who has a
-    brown nest with a Helicopter-propeller, and two eyes with two long arms that
-    seem to look like wings. He has sharp teeth, and has a pointed tail in his back.
-    When he walks, he will keep his arms close together and stand tall, but when
-    chasing after a player, Yellow will flap his wings with the mouth open and lean
-    forward.
-
-
-    <b>Story:</b> Unknown'
+  features: Yellow is a bird inspired monster who has a brown nest with a Helicopter-propeller,
+    and two eyes with two long arms that seem to look like wings. He has sharp teeth,
+    and has a pointed tail in his back. When he walks, he will keep his arms close
+    together and stand tall, but when chasing after a player, Yellow will flap his
+    wings with the mouth open and lean forward.
+  story: Unknown
   contentHeight: 1687
+  featureHeight: 783
+  storyHeight: 202
+  furturePosY: -935
+  storyPosY: -1428
+  colorTitle: {r: 0.7019608, g: 0.33333334, b: 0.99215686, a: 1}

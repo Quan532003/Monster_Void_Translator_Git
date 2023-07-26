@@ -5,3 +5,18 @@ Poppy playtime
 1966
 <b>Features:</b> Boxy Box is a vibrant, colorful jack-in-the-box toy. The main body is a light blue square box with golden shapes adorning each side. There is also a wind-up crank. Aside from the stars, each shape can open up to the box's interior, revealing each of his crimson red body parts. His feet and head are cubical and he has matted red fur. Boxy Box's eyes are big and dilated. He has claws on his feet and hands and has curved sharpened teeth. His limbs consist of dark-red metallic springs, allowing them to stretch far out.
 <b>Story:</b> Boxy Box is a fun and energetic monster, but a bit clumsy. But as a monster, he is monstrously savage, being able to eat people in one fell swoop. This Monster is a streamlined hunter with both speed and agility on his side. His springy limbs allow him to jump high and far to reach wherever he desires. Boxy has several ways to surprise his prey. He can go into box form and hide amongst the scenery. His spring-arm allows him to grab survivors and pull them close before clawing them to death. On top of it all, his music will become louder and faster the closer he gets to his prey.
+"- Name: Boxy Box
+- Nickname: Unknown
+- Gender: Male
+- Origin: Poppy playtime
+- Year of birth: 1966
+- Features:Boxy Box is a vibrant, colorful jack-in-the-box toy. The main body is a light blue square box with golden shapes adorning each side. There is also a wind-up crank. Aside from the stars, each shape can open up to the box's interior, revealing each of his crimson red body parts. His feet and head are cubical and he has matted red fur. Boxy Box's eyes are big and dilated. He has claws on his feet and hands and has curved sharpened teeth. His limbs consist of dark-red metallic springs, allowing them to stretch far out.
+- Story: Boxy Box is a fun and energetic monster, but a bit clumsy. But as a monster, he is monstrously savage, being able to eat people in one fell swoop. 
+This Monster is a streamlined hunter with both speed and agility on his side. His springy limbs allow him to jump high and far to reach wherever he desires.
+Boxy has several ways to surprise his prey. He can go into box form and hide amongst the scenery. His spring-arm allows him to grab survivors and pull them close before clawing them to death. On top of it all, his music will become louder and faster the closer he gets to his prey."
+-1000
+1000
+-2175
+1330
+2900
+2A57FF

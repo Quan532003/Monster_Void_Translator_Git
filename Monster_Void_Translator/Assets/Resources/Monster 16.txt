@@ -5,3 +5,16 @@ Rainbow Friend
 2022
 <b>Features:</b> Green is a lanky, green tall monster with googly eyes and sharp teeth. His body is mostly cylindrical and he has long rubbery arms and fingers. He has two legs which is shorter in contrast to his arms.
 <b>Story:</b> Green is quite friendly with humans. Green is blind so he has to rely on his senses such as hearing and touch. Green is Blue's best friend. Green is a monster who always puts friendship first.
+"- Name: Green
+- Nickname: Unknown
+- Gender: Male
+- Origin: Rainbow Friend
+- Year of birth: 2022
+- Features: Green is a lanky, green tall monster with googly eyes and sharp teeth. His body is mostly cylindrical and he has long rubbery arms and fingers. He has two legs which is shorter in contrast to his arms.
+- Story: Green is quite friendly with humans. Green is blind so he has to rely on his senses such as hearing and touch. Green is Blue's best friend. Green is a monster who always puts friendship first."
+-755
+520
+-1295
+515
+1590
+00D29A

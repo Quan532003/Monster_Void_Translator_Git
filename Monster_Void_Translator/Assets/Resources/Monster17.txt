@@ -5,3 +5,16 @@ Garten of Banban II
 March 3, 2023
 <b>Characteristics:</b> Slow Slainy appears as a greenish-yellow snail. She has elongated eyes with unusually large eyes. She possesses a wide, scary grin. Her shell is darker yellow and spiral shaped.
 <b>Story:</b> Unknown
+"- Name: Slow Slainy
+- Nickname: Unknown
+- Gender: Female
+- Origin: Garten of Banban II
+- Year of birth: March 3, 2023
+- Characteristics: Slow Slainy appears as a greenish-yellow snail. She has elongated eyes with unusually large eyes. She possesses a wide, scary grin. Her shell is darker yellow and spiral shaped.
+- Story: Unknown"
+-720
+455
+-1050
+205
+1587
+FA6F00

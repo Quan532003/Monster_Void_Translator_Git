@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
@@ -33,6 +34,7 @@ public class SoundPlayEachMonster : MonoBehaviour
     public Text noticeTimeCountDown;
     public Text nameTxt;
     int waitIndex;
+    [SerializeField] Button monsterHoldBtn;
     private void Awake()
     {
         ResetLoopAndTimePlay();
@@ -59,6 +61,7 @@ public class SoundPlayEachMonster : MonoBehaviour
     public void SetSprite()
     {
         monsterImage.sprite = monsterAvatar[PlayerData.monsterIndexInSound];
+        monsterHoldBtn.GetComponent<Image>().sprite = monsterAvatar[PlayerData.monsterIndexInSound]; 
     }
     public void SetName()
     {
@@ -110,6 +113,17 @@ public class SoundPlayEachMonster : MonoBehaviour
         timeCountDown = 0f;
         noticeTimeCountDown.gameObject.SetActive(true);
     }
+    public void OnExitMonsterBtn()
+    {
+        timeFill.fillAmount = 0f;
+        timePlay = 0f;
+        timeCountDown = 0f;
+        isCountDown = false;
+        isPlaying = false;
+        played = false;
+        timeInPlay.SetActive(false);
+        SoundController.Instance.source.Stop();
+    }    
     public void OnBackBtnClicked()
     {
         this.gameObject.SetActive(false);
@@ -123,10 +137,24 @@ public class SoundPlayEachMonster : MonoBehaviour
     public void OnLoopBtnClicked()
     {
         isLoop = !isLoop;
-        if(isLoop) timeWait = 0f;
+        if(isLoop)
+        {
+            timeWait = 0f;
+
+        }
         else
         {
             timeWait = timeWaitList[waitIndex];
+        }
+        if (timeWait == 0f)
+        {
+            monsterBtn.gameObject.SetActive(false);
+            monsterHoldBtn.gameObject.SetActive(true);
+        }
+        else
+        {
+            monsterHoldBtn.gameObject.SetActive(false);
+            monsterBtn.gameObject.SetActive(true);
         }
         noticeInLoop.SetActive(isLoop);
 
@@ -135,6 +163,16 @@ public class SoundPlayEachMonster : MonoBehaviour
     public void OnChangeValueInDropDown(int index)
     {
         timeWait = timeWaitList[index];
+        if(index == 0)
+        {
+            monsterBtn.gameObject.SetActive(false) ;
+            monsterHoldBtn.gameObject.SetActive(true);
+        }
+        else
+        {
+            monsterHoldBtn.gameObject.SetActive(false);
+            monsterBtn.gameObject.SetActive(true);
+        }
         waitIndex = index;
         isLoop = false;
         ResetLoopAndTimePlay();

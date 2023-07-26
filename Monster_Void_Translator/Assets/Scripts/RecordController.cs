@@ -19,6 +19,7 @@ public class RecordController : MonoBehaviour
     public GameObject recordCover;
     bool isPlaying = false;
     bool isCountDown = false;
+    [SerializeField] GameObject monsterAvatar;
     float timePlay = 0f;
     public float timeCountDown;
     public GameObject recordImage;
@@ -29,6 +30,16 @@ public class RecordController : MonoBehaviour
         Instance = this;
         playBtn.onClick.AddListener(OnPlayBtnClicked);
         stopPlayBtn.onClick.AddListener(OnStopPlayBtnClicked);
+
+        
+    }
+
+    private void Start()
+    {
+        if (PlayerData.tutorialTrans == 0)
+        {
+            TutorialTranslatorPopUp.Instance.TutorialRecord();
+        }
     }
     float timeVibration = 0f;
 
@@ -80,6 +91,10 @@ public class RecordController : MonoBehaviour
 
     public void OnRecordBtnClicked()
     {
+        if (PlayerData.tutorialTrans == 0)
+        {
+            TutorialTranslatorPopUp.Instance.SetActiveTutorialRecord(false);
+        }
         recordImage.SetActive(true);
         playImage.SetActive(false);
         playCover.SetActive(true);
@@ -95,6 +110,11 @@ public class RecordController : MonoBehaviour
         recordBtn.GetComponent<RectTransform>().localScale = Vector3.one;
         SaveRecord.SaveDataRecord((int)SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds[indexSound].length, PlayerData.currentMonster, indexSound);
         PlayerData.numberRecord++;
+
+        if(PlayerData.tutorialTrans == 0)
+        {
+            TutorialTranslatorPopUp.Instance.TutorialPlay();
+        }
     }
 
     public void OnPlayBtnClicked()
@@ -109,7 +129,10 @@ public class RecordController : MonoBehaviour
         timeCountDownTxt.gameObject.SetActive(true);
         playBtn.gameObject.SetActive(false);
         stopPlayBtn.gameObject.SetActive(true);
-
+        if (PlayerData.tutorialTrans == 0)
+        {
+            TutorialTranslatorPopUp.Instance.SetActiveTutorialPlay(false);
+        }
     }
     public void OnStopPlayBtnClicked()
     {
@@ -126,6 +149,10 @@ public class RecordController : MonoBehaviour
         timeCountDownTxt.gameObject.SetActive(false);
         playBtn.gameObject.SetActive(true);
         stopPlayBtn.gameObject.SetActive(false);
+        if (PlayerData.tutorialTrans == 0)
+        {
+            TutorialTranslatorPopUp.Instance.TutorialMonsterSelect();
+        }
     }
     void SetFillOnPlay()
     {

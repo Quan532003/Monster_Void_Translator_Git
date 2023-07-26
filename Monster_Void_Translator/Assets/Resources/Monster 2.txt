@@ -3,5 +3,19 @@ Unknown
 Male
 Rainbow Friend
 2022
+
+595
+-792
+375
+-1302
+14A400
+1587
 <b>Features:</b> Blue is a big, blue monster who wears a yellow crown, with drool hanging from his mouth. Blue has a large eye on the right side of his face and a button eye on the left side. Blue has a zombie-like gait with a hunchback and two arms outstretched in front of him.
 <b>Story:</b> Previously, Blue had 2 normal eyes and was a friendly monster but some tragedy lost an eye which has now been replaced with a button.
+"- Name: Blue
+- Nickname: Unknown
+- Gender: Male
+- Origin: Rainbow Friend
+- Year of birth: 2022
+- Features: Blue is a big, blue monster who wears a yellow crown, with drool hanging from his mouth. Blue has a large eye on the right side of his face and a button eye on the left side. Blue has a zombie-like gait with a hunchback and two arms outstretched in front of him.
+- Story: Previously, Blue had 2 normal eyes and was a friendly monster but some tragedy lost an eye which has now been replaced with a button."

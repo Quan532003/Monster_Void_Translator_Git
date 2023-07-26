@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Blue
   m_EditorClassIdentifier: 
   monsterName: Blue
-  nickName: Unknown
   gender: Male
   birthDay: 2022
   Origin: Rainbow Friend
-  featuresAndStory: '<b>Features:</b> Blue is a big, blue monster who wears a yellow
-    crown, with drool hanging from his mouth. Blue has a large eye on the right side
-    of his face and a button eye on the left side. Blue has a zombie-like gait with
-    a hunchback and two arms outstretched in front of him.
-
-
-    <b>Story:</b> Previously,
-    Blue had 2 normal eyes and was a friendly monster but some tragedy lost an eye
-    which has now been replaced with a button.'
+  features: Blue is a big, blue monster who wears a yellow crown, with drool hanging
+    from his mouth. Blue has a large eye on the right side of his face and a button
+    eye on the left side. Blue has a zombie-like gait with a hunchback and two arms
+    outstretched in front of him.
+  story: Previously, Blue had 2 normal eyes and was a friendly monster but some tragedy
+    lost an eye which has now been replaced with a button.
   contentHeight: 1687
+  featureHeight: 595
+  storyHeight: 375
+  furturePosY: -842
+  storyPosY: -1352
+  colorTitle: {r: 0.078431375, g: 0.6431373, b: 0, a: 1}

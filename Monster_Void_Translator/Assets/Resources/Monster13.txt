@@ -5,3 +5,16 @@ Garten of Banban II
 March 3, 2023
 <b>Features:</b> Nubnub appears as a blue spider-like human with three eyes and a large mouth with several sharp teeth. In Nubnub's mouth there is also a tongue. Nubnub wears a monochrome birthday hat tilted to the left side of his head.
 <b>Story:</b> Unknown
+"- Original name: Nubnub
+- Nickname: Unknown
+- Gender: Male
+- Origin: Garten of Banban II
+- Year of birth: March 3, 2023
+- Features: Nubnub appears as a blue spider-like human with three eyes and a large mouth with several sharp teeth. In Nubnub's mouth there is also a tongue. Nubnub wears a monochrome birthday hat tilted to the left side of his head.
+- Story: Unknown"
+-750
+510
+-1130
+190
+1587
+B92FFF

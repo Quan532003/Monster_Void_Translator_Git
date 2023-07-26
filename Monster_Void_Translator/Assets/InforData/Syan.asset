@@ -13,15 +13,17 @@ MonoBehaviour:
   m_Name: Syan
   m_EditorClassIdentifier: 
   monsterName: Syan
-  nickName: Unknown
   gender: Female
   birthDay: 2022
   Origin: Rainbow Friend
-  featuresAndStory: '<b>Features:</b> Syan is an armless cyan colored dinosaur like
-    creature. She closely resembles a lizard with 2 legs on the sides and a tail
-    between them. Her head also resembles a magnet or anchor shape separated into
-    an upper and lower jaw, both having 12 - 14 teeth.
-
-
-    <b>Story:</b> Unknown'
+  features: Syan is an armless cyan colored dinosaur like creature. She closely resembles
+    a lizard with 2 legs on the sides and a tail between them. Her head also resembles
+    a magnet or anchor shape separated into an upper and lower jaw, both having 12
+    - 14 teeth.
+  story: Unknown
   contentHeight: 1687
+  featureHeight: 590
+  storyHeight: 180
+  furturePosY: -840
+  storyPosY: -1280
+  colorTitle: {r: 0.7411765, g: 0.015686275, b: 1, a: 1}

@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Mr.Stinger
   m_EditorClassIdentifier: 
   monsterName: Mr. Stinger
-  nickName: Unknown
   gender: Male
   birthDay: March 18, 2022
   Origin: Garten of Banban
-  featuresAndStory: '<b>Features:</b> Mr.Stinger''s design depicts an orange jellyfish
-    with one eye in the middle of his bell connecting to 6 extendable tentacles.
-    Four of his tentacles are down, while the other two are up at the sides of his
-    head in a friendly pose.
-
-
-    <b>Story:</b> Mr.Stinger is an intelligent monster.
-    Mr.Stingercould be considered to be the least hostile monster. Compared to most
-    other mascots who attack on sight, he usually attempts to be diplomatic and/or
-    use his telepathic powers and usually only uses fighting as a last resort.'
-  contentHeight: 1800
+  features: Mr.Stinger's design depicts an orange jellyfish with one eye in the middle
+    of his bell connecting to 6 extendable tentacles. Four of his tentacles are down,
+    while the other two are up at the sides of his head in a friendly pose.
+  story: Mr.Stinger is an intelligent monster. Mr.Stinger could be considered to
+    be the least hostile monster. Compared to most other mascots who attack on sight,
+    he usually attempts to be diplomatic and/or use his telepathic powers and usually
+    only uses fighting as a last resort.
+  contentHeight: 1856
+  featureHeight: 525
+  storyHeight: 656
+  furturePosY: -807
+  storyPosY: -1420
+  colorTitle: {r: 1, g: 0.7176471, b: 0.3647059, a: 1}

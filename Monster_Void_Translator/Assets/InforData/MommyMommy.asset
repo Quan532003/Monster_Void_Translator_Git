@@ -13,29 +13,31 @@ MonoBehaviour:
   m_Name: MommyMommy
   m_EditorClassIdentifier: 
   monsterName: Mommy Mommy
-  nickName: Unknown
   gender: Female
   birthDay: 1991
   Origin: Poppy playtime
-  featuresAndStory: '<b>Features:</b> Mommy Mommy is a large, slender creature bearing
-    an uncanny resemblance to a spider, with only four limbs. She has baby pink skin
-    with curly, tangled noodle-like hot pink hair, styled into a high ponytail using
-    a baby blue hair tie. Her face consists of a pair of wide-set green eyes with
-    tiny pupils and three eyelashes, as well as a gaping, hollow mouth. Dark pink
-    lipstick can be seen adorning her mouth, and she has no nose. A thin neck with
-    a baby blue necklace connects her head to her body, which is comprised of a small
-    angular torso with a dark pink sweetheart neckline, a thin appendage resembling
-    her ''waist'', and a rotund dark pink bottom to resemble a sweetheart-bodice
-    dress. Her four limbs are all extremely elastic, capable of stretching ''hundreds
-    of feet'' according to the Transfer Request. Her arms end in two crimson glove-like
-    hands with thin baby blue cuffs, while her legs end in ankle-length baby blue
-    stockings with crimson Mary Janes.
+  features: Mommy Mommy is a large, slender creature bearing an uncanny resemblance
+    to a spider, with only four limbs. She has baby pink skin with curly, tangled
+    noodle-like hot pink hair, styled into a high ponytail using a baby blue hair
+    tie. Her face consists of a pair of wide-set green eyes with tiny pupils and
+    three eyelashes, as well as a gaping, hollow mouth. She has no nose. A thin neck
+    with a baby blue necklace connects her head to her body, which is comprised of
+    a small angular torso with a dark pink sweetheart neckline, a thin appendage
+    resembling her 'waist', and a rotund dark pink bottom. Her four limbs are all
+    extremely elastic, capable of stretching 'hundreds of feet'. Her arms end in
+    two crimson glove-like hands with thin baby blue cuffs, while her legs end in
+    ankle-length baby blue stockings.
+  story: 'Moomy has two form: Normal and Deranged
 
-
-    <b>Story:</b> Moomy has two form: Normal
-    and Deranged In her deranged form, Mommy''s eyes are now completely dilated,
-    giving off an unhinged vibe. Her irises have also faded to a pale artichoke.
-    She will also no longer blink. Her hair is now twisted and mangled, no longer
-    the neat curls in her previous form. Her hands are enlarged maniacally, and her
-    fingers are splayed and elongated to resemble claws. Her body is also twisted.'
-  contentHeight: 3990
+    In her deranged form, Mommy''s
+    eyes are now completely dilated, giving off an unhinged vibe. Her irises have
+    also faded to a pale artichoke. She will also no longer blink. Her hair is now
+    twisted and mangled, no longer the neat curls in her previous form. Her hands
+    are enlarged maniacally, and her fingers are splayed and elongated to resemble
+    claws. Her body is also twisted.'
+  contentHeight: 3150
+  featureHeight: 1540
+  storyHeight: 925
+  furturePosY: -1320
+  storyPosY: -2560
+  colorTitle: {r: 0.6156863, g: 0, b: 0.8784314, a: 1}

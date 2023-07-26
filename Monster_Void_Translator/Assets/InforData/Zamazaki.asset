@@ -13,19 +13,20 @@ MonoBehaviour:
   m_Name: Zamazaki
   m_EditorClassIdentifier: 
   monsterName: Zamazaki & Zamataki
-  nickName: Unknown
   gender: Male
   birthDay: September 2022
   Origin: Garten of Banban III
-  featuresAndStory: '<b>Features:</b> Zamazaki & Zamataki are two different monsters
-    in one. Their construction hats they wear may imply them being construction workers.
-    Zamazaki is the turtle, with the seafoam color on his head and legs. Zamataki
-    is the chameleon side, having a darker turquoise tone aside from his seafoam
-    tongue and areas around the eyes. The two are connected by  Zamazaki''s teal
-    turtlelike shell. Two legs of each jut from out the bottom, and their heads from
-    the front. Chamataki''s coiled tail extends out the back.
-
-
-    <b>Story:</b>
-    Unknown'
-  contentHeight: 2000
+  features: Zamazaki & Zamataki are two different monsters in one. Their construction
+    hats they wear may imply them being construction workers. Zamazaki is the turtle,
+    with the seafoam color on his head and legs. Zamataki is the chameleon side,
+    having a darker turquoise tone aside from his seafoam tongue and areas around
+    the eyes. The two are connected by  Zamazaki's teal turtlelike shell. Two legs
+    of each jut from out the bottom, and their heads from the front. Zamataki's coiled
+    tail extends out the back.
+  story: Unknown
+  contentHeight: 1970
+  featureHeight: 1080
+  storyHeight: 202
+  furturePosY: -1085
+  storyPosY: -1756
+  colorTitle: {r: 0.7019608, g: 0.32941177, b: 0.99215686, a: 1}

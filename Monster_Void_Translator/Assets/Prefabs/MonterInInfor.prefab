@@ -128,8 +128,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 218.6325, y: 0}
-  m_SizeDelta: {x: -437.265, y: 0}
+  m_AnchoredPosition: {x: 227.17, y: 0}
+  m_SizeDelta: {x: -454.35, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &281564728829478217
 CanvasRenderer:
@@ -160,18 +160,18 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls: []
   m_FontData:
-    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 60
+    m_Font: {fileID: 12800000, guid: 856b19054cf645942a65d80a87d9cd55, type: 3}
+    m_FontSize: 80
     m_FontStyle: 1
     m_BestFit: 0
     m_MinSize: 6
-    m_MaxSize: 60
+    m_MaxSize: 80
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
-    m_LineSpacing: 1
+    m_LineSpacing: 1.2
   m_Text: Baby Opila Birds
 --- !u!1 &281564729446106113
 GameObject:

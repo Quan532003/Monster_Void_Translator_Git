@@ -13,17 +13,18 @@ MonoBehaviour:
   m_Name: Green
   m_EditorClassIdentifier: 
   monsterName: Green
-  nickName: Unknown
   gender: Male
   birthDay: 2022
   Origin: Rainbow Friend
-  featuresAndStory: '<b>Features:</b> Green is a lanky, green tall monster with googly
-    eyes and sharp teeth. His body is mostly cylindrical and he has long rubbery
-    arms and fingers. He has two legs which is shorter in contrast to his arms.
-
-
-    <b>Story:</b>
-    Green is quite friendly with humans. Green is blind so he has to rely on his
-    senses such as hearing and touch. Green is Blue''s best friend. Green is a monster
-    who always puts friendship first.'
-  contentHeight: 1687
+  features: Green is a lanky, green tall monster with googly eyes and sharp teeth.
+    His body is mostly cylindrical and he has long rubbery arms and fingers. He has
+    two legs which is shorter in contrast to his arms.
+  story: Green is quite friendly with humans. Green is blind so he has to rely on
+    his senses such as hearing and touch. Green is Blue's best friend. Green is a
+    monster who always puts friendship first.
+  contentHeight: 1690
+  featureHeight: 520
+  storyHeight: 515
+  furturePosY: -805
+  storyPosY: -1345
+  colorTitle: {r: 0, g: 0.8235294, b: 0.6039216, a: 1}

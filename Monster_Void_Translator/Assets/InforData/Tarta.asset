@@ -13,16 +13,17 @@ MonoBehaviour:
   m_Name: Tarta
   m_EditorClassIdentifier: 
   monsterName: Tarta
-  nickName: Unknown
   gender: Male
   birthDay: May 5, 2023
   Origin: Garten of Banban III
-  featuresAndStory: '<b>Features:</b> Tarta is the father of Baby Opila Bird. Tarta''s
-    body is light green. His wings, legs, and beak are pink.
-
-
-    <b>Story:</b>
-    Tarta Bird has a monster form in addition to its normal gentle form. Tarta''s
+  features: Tarta is the father of Baby Opila Bird. Tarta's body is light green.
+    His wings, legs, and beak are pink.
+  story: Tarta Bird has a monster form in addition to its normal gentle form. Tarta's
     Monster form aside from the feathers on his head which are pink like wings and
-    beaks, Tarta also has glowing Cyan eyes instead of white.'
+    beaks, Tarta also has glowing Cyan eyes instead of white.
   contentHeight: 1687
+  featureHeight: 355
+  storyHeight: 533
+  furturePosY: -722
+  storyPosY: -1185
+  colorTitle: {r: 0.39215687, g: 0.42745098, b: 0.8784314, a: 1}

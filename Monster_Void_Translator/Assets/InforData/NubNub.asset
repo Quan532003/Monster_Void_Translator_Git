@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: NubNub
   m_EditorClassIdentifier: 
   monsterName: Nubnub
-  nickName: Unknown
   gender: Male
   birthDay: March 3, 2023
   Origin: Garten of Banban II
-  featuresAndStory: '<b>Features:</b> Nubnub appears as a blue spider-like human
-    with three eyes and a large mouth with several sharp teeth. In Nubnub''s mouth
-    there is also a tongue. Nubnub wears a monochrome birthday hat tilted to the
-    left side of his head.
-
-
-    <b>Story:</b> Unknown'
-  contentHeight: 1687
+  features: Nubnub appears as a blue spider-like human with three eyes and a large
+    mouth with several sharp teeth. In Nubnub's mouth there is also a tongue. Nubnub
+    wears a monochrome birthday hat tilted to the left side of his head.
+  story: Unknown
+  contentHeight: 1587
+  featureHeight: 510
+  storyHeight: 190
+  furturePosY: -800
+  storyPosY: -1180
+  colorTitle: {r: 0.7254902, g: 0.18431373, b: 1, a: 1}

@@ -13,15 +13,16 @@ MonoBehaviour:
   m_Name: SlowSlainy
   m_EditorClassIdentifier: 
   monsterName: Slow Slainy
-  nickName: Unknown
   gender: Female
   birthDay: March 3, 2023
   Origin: Garten of Banban II
-  featuresAndStory: '<b>Characteristics:</b> Slow Slainy appears as a greenish-yellow
-    snail. She has elongated eyes with unusually large eyes. She possesses a wide,
-    scary grin. Her shell is darker yellow and spiral shaped.
-
-
-    <b>Story:</b>
-    Unknown'
+  features: Slow Slainy appears as a greenish-yellow snail. She has elongated eyes
+    with unusually large eyes. She possesses a wide, scary grin. Her shell is darker
+    yellow and spiral shaped.
+  story: Unknown
   contentHeight: 1687
+  featureHeight: 455
+  storyHeight: 205
+  furturePosY: -770
+  storyPosY: -1120
+  colorTitle: {r: 0.98039216, g: 0.43529412, b: 0, a: 1}

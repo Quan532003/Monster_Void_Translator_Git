@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Bunbuleena
   m_EditorClassIdentifier: 
   monsterName: Bunbuleena
-  nickName: Unknown
   gender: Female
   birthDay: March 3, 2023
   Origin: Garten of Banban II
-  featuresAndStory: '<b>Features:</b> Banbaleena is Banban''s female partner. She
-    is a tall white horned humanoid demon similar to Banban, although she does not
-    wear his party hat, instead she wears a monotonous pink bow. She also doesn''t
-    have a tongue like Banban.
-
-
-    <b>Story:</b> Bunbuleena is an experiment that
-    takes genes from Bunbun, so Bunbuleena also has the same characteristics as Bunbun.
-    Bunbuleena also has 2 forms. Her monster form is a tall white demon with a wide
-    open mouth. She has fiery red eyes with pink makeup pouring down her melted face.'
-  contentHeight: 2050
+  features: Bunbuleena is Bunbun's female partner. She is a tall white horned humanoid
+    demon similar to Bunbun, although she does not wear his party hat, instead she
+    wears a monotonous pink bow. She also doesn't have a tongue like Banban.
+  story: Bunbuleena is an experiment that takes genes from Bunbun, so Bunbuleena
+    also has the same characteristics as Bunbun. Bunbuleena also has 2 forms. Her
+    monster form is a tall white demon with a wide open mouth. She has fiery red
+    eyes with pink makeup pouring down her melted face.
+  contentHeight: 2045
+  featureHeight: 595
+  storyHeight: 1090
+  furturePosY: -842
+  storyPosY: -1630
+  colorTitle: {r: 0.9843137, g: 0.20784314, b: 0.18039216, a: 1}

@@ -5,3 +5,16 @@ Skibidi Toilet
 2023
 <b>Features:</b> A head grows out of a white toilet.
 <b>Story:</b> Skubidu is a character in an animated series released on Youtube. Skubidu. is a monster with a head growing out of a white toilet that has a ghostly voice and song. That song is both a tool for communication within their species and has the ability to brainwash humans. Skubidu attacks humans by eating their heads. Skibidi spawns new Skubidus from their mouths after eating. The more heads he can eat, the bigger Skubidu will be. Skubidu's status and rank depended on their size. And the special thing is that they can fly.
+"- Name: Skubidu
+- Nickname: Unknown
+- Gender: Male
+- Year of birth: 2023
+- Origin: Skibidi Toilet
+- Features: A head grows out of a white toilet.
+- Story: Skubidu has a ghostly voice and song. That song is both a tool for communication within their species and has the ability to brainwash humans. Skubidu attacks humans by eating their heads. Skubidu spawns new Skubidus from their mouths after eating. The more heads he can eat, the bigger Skubidu will be. Skubidu's status and rank depended on their size. And the special thing is that they can fly."
+-600
+215
+-1130
+850
+1600
+706200

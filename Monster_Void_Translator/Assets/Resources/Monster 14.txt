@@ -5,3 +5,16 @@ Rainbow Friend
 2022
 <b>Features:</b> Syan is an armless cyan colored dinosaur like creature. She closely resembles a lizard with 2 legs on the sides and a tail between them. Her head also resembles a magnet or anchor shape separated into an upper and lower jaw, both having 12 - 14 teeth.
 <b>Story:</b> Unknown
+"- Name: Syan
+- Nickname: Unknown
+- Gender: Female
+- Origin: Rainbow Friend
+- Year of birth: 2022
+- Features: Syan is an armless cyan colored dinosaur like creature. She closely resembles a lizard with 2 legs on the sides and a tail between them. Her head also resembles a magnet or anchor shape separated into an upper and lower jaw, both having 12 - 14 teeth.
+- Story: Unknown"
+-790
+590
+-1210
+180
+1587
+BD04FF

@@ -6,12 +6,19 @@ using UnityEngine;
 public class MonsterInforSO : ScriptableObject
 {
     public string monsterName;
-    public string nickName;
     public string gender;
     public string birthDay;
     public string Origin;
 
     [TextArea]
-    public string featuresAndStory;
+    public string features;
+    [TextArea]
+    public string story;
     public int contentHeight;
+    public int featureHeight;
+    public int storyHeight;
+    public int furturePosY;
+    public int storyPosY;
+
+    public Color colorTitle;
 }

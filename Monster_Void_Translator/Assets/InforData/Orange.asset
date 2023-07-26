@@ -13,18 +13,19 @@ MonoBehaviour:
   m_Name: Orange
   m_EditorClassIdentifier: 
   monsterName: Orange
-  nickName: Unknown
   gender: Male
   birthDay: 2022
   Origin: Rainbow Friend
-  featuresAndStory: '<b>Features:</b> Orange is an orange reptilian Rainbow Friend
-    reminiscent of a gecko. He is characterized by two bulging eyes and two rows
-    of sharp conical teeth lining his elongated jaws. When running, he appears anthropomorphic
-    and makes a pitter-patter sound whilst walking on his hind legs with his arms
-    stretched out.
-
-
-    <b>Story:</b> Orange appears to be the most violent of the
-    Rainbow Friends, getting angry if he isn''t fed and running around the place
-    when this happens, attacking anything in his path.'
-  contentHeight: 1800
+  features: Orange is an orange reptilian Rainbow Friend reminiscent of a gecko.
+    He is characterized by two bulging eyes and two rows of sharp conical teeth lining
+    his elongated jaws. When running, he appears anthropomorphic and makes a pitter-patter
+    sound whilst walking on his hind legs with his arms stretched out.
+  story: Orange appears to be the most violent of the Rainbow Friends, getting angry
+    if he isn't fed and running around the place when this happens, attacking anything
+    in his path.
+  contentHeight: 1807
+  featureHeight: 685
+  storyHeight: 440
+  furturePosY: -890
+  storyPosY: -1485
+  colorTitle: {r: 0.98039216, g: 0.43529412, b: 0, a: 1}

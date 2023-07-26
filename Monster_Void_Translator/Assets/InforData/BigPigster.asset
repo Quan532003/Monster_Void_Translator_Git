@@ -13,16 +13,16 @@ MonoBehaviour:
   m_Name: BigPigster
   m_EditorClassIdentifier: 
   monsterName: Big pigster
-  nickName: The Four-Eyed
   gender: Male
   birthDay: September 2022
   Origin: Garten of Banban III
-  featuresAndStory: '<b>Features:</b> Big Pigster is a purple pig with 4 eyes, 2
-    eyes on the top of the head and 2 eyes in the middle of the belly. Big Pigster
-    has a nose between two pairs of eyes, two small ears on top of its head and a
-    wide mouth with 10 teeth.
-
-
-    <b>Story:</b> Big Pigster can get bigger when
-    he eats more food.'
-  contentHeight: 1687
+  features: Big Pigster is a purple pig with 4 eyes, 2 eyes on the top of the head
+    and 2 eyes in the middle of the belly. Big Pigster has a nose between two pairs
+    of eyes, two small ears on top of its head and a wide mouth with 10 teeth.
+  story: Big Pigster can get bigger when he eats more food.
+  contentHeight: 1678
+  featureHeight: 505
+  storyHeight: 280
+  furturePosY: -800
+  storyPosY: -1235
+  colorTitle: {r: 0.1882353, g: 0.7490196, b: 0.05490196, a: 1}

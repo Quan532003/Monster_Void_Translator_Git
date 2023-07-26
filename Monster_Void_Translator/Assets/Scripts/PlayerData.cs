@@ -18,7 +18,56 @@ public class PlayerData
     const string NoAD = "NoAD";
     const string Rate = "Rate";
     const string MonsterIndexInSoundPopUp = "MonsterInSound";
+    const string TutorialTrans = "TutorialTrans";
+    const string TutorialSound = "TutorialSound";
+    const string TutorialHistory = "TutorialHistory";
+    const string TutorialInfor = "TutorialInfor";
 
+
+    public static int tutorialTrans
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(TutorialTrans, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(TutorialTrans, value);
+        }
+    }
+    public static int tutorialSound
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(TutorialSound, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(TutorialSound, value);
+        }
+    }
+    public static int tutorialHistory
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(TutorialHistory, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(TutorialHistory, value);
+        }
+    }
+    public static int tutorialInfor
+    {
+        get
+        {
+            return PlayerPrefs.GetInt(TutorialInfor, 0);
+        }
+        set
+        {
+            PlayerPrefs.SetInt(TutorialInfor, value);
+        }
+    }
 
     public static int idRecord
     {
