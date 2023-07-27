@@ -122,7 +122,7 @@ public class PlayerData
         }
         get
         {
-            return PlayerPrefs.GetString(LockMonster, "2,3,4,5,10,16");
+            return PlayerPrefs.GetString(LockMonster, "5,9,12,19");
         }
     }
     public static int numberRecord
@@ -155,14 +155,14 @@ public class PlayerData
         return PlayerPrefs.GetString(RecordName + index, "");
     }
 
-    public static void SetRecordLength(int index, int length)
+    public static void SetRecordLength(int index, float length)
     {
-        PlayerPrefs.SetInt(RecordLength + index, length);
+        PlayerPrefs.SetFloat(RecordLength + index, length);
     }
 
-    public static int GetRecordLength(int index)
+    public static float GetRecordLength(int index)
     {
-        return PlayerPrefs.GetInt(RecordLength + index, 0);
+        return PlayerPrefs.GetFloat(RecordLength + index, 0);
     }
 
     public static void SetMonterIndex(int index, int type)

@@ -10,7 +10,7 @@ public class RecordInHistory : MonoBehaviour
 {
     public string recordName;
     public string recordDay;
-    public int recordLength;
+    public float recordLength;
     public int monsterIndex;
     public int soundIndex;
     public GameObject playImage;
@@ -33,6 +33,7 @@ public class RecordInHistory : MonoBehaviour
     {
         SetTextPlay(index);
         recordLengthTxt.gameObject.SetActive(active);
+        isPlaying = false;
     }
     public void SetTextInRecord()
     {
@@ -41,7 +42,7 @@ public class RecordInHistory : MonoBehaviour
         recordLengthTxt.text = Helper.ConvertToMinuteSecond(recordLength);
     }
 
-    void SetTextPlay(int index)
+    public void SetTextPlay(int index)
     {
         firstTimeText.text = Helper.ConvertToMinuteSecond(0);
         secondTimeText.text = Helper.ConvertToMinuteSecond(PlayerData.GetRecordLength(index));

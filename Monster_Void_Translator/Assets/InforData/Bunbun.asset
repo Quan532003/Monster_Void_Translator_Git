@@ -16,12 +16,14 @@ MonoBehaviour:
   gender: Male
   birthDay: September 2022
   Origin: Garten of Banban
-  features: "Bunbun is a tall, red humanoid with an elliptical head with two hats
+  features: 'Bunbun is a tall, red humanoid with an elliptical head with two hats
     on two horns, only two round eyes and a toothless mouth with a long, soft tongue
-    inside.        \nBunbun's catchphrase: \"\"\"\"Sharing is caring! What's yours
-    is mine!\"\"\"\""
+    inside.
+
+    Bunbun''s catchphrase: """"Sharing is caring! What''s yours is
+    mine!""""'
   story: Bunbun is a monster with two different forms. Besides the original form,
-    BunBun also has another form called Hellish. Banban's Hellish form has a much
+    BunBun also has another form called Hellish. Bunbun's Hellish form has a much
     more muscular build, his party hats are now gone, revealing demon horns with
     a spiral pattern similar to those found on party hats. His eyes were completely
     white and much larger, not to mention triangular, and his mouth had a grin with

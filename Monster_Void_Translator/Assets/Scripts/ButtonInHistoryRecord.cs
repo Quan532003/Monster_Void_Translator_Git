@@ -40,19 +40,9 @@ public class ButtonInHistoryRecord : MonoBehaviour
         .SetSubject("Subject goes here").SetText("Hello world!").SetUrl("https://github.com/yasirkula/UnityNativeShare")
         .SetCallback((result, shareTarget) => Debug.Log("Share result: " + result + ", selected app: " + shareTarget))
         .Share();
-        if(PlayerData.tutorialHistory == 0)
-        {
-            yield return new WaitForSeconds(0.3f);
-            TutorialHistory.Instance.TutorialErase();
-        }
     }
     public void OnEraseBtnInHistoryRecord(int index)
     {
-        if (PlayerData.tutorialHistory == 0)
-        {
-            TutorialHistory.Instance.EndTutorial();
-            return;
-        }
         int numberRecord = PlayerData.numberRecord;
         for(int i = index; i < numberRecord; i++)
         {

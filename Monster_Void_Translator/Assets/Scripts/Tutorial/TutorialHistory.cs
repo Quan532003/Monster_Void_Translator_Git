@@ -36,9 +36,9 @@ public class TutorialHistory : MonoBehaviour
         {
             coverHistory.SetActive(true);
             coverRecord.gameObject.SetActive(true);
-            var rect = viewPos.sizeDelta;
+            var rect = viewPos.rect.height;
             var rectCoverRecord = coverRecord.sizeDelta;
-            rectCoverRecord.y = rect.y - 200;
+            rectCoverRecord.y = rect - 200;
             coverRecord.sizeDelta = rectCoverRecord;
             handSelect.SetActive(true);
             textSelect.SetActive(true);
@@ -51,8 +51,13 @@ public class TutorialHistory : MonoBehaviour
         textPlay.SetActive(false);
         handShare.SetActive(true);
         textShare.SetActive(true);
-        shareBtn.enabled = true;
         playBtn.enabled = false;
+        StartCoroutine(waitForSecond(1.5f, ()=>
+        {
+            InActiveShare();
+            TutorialErase();
+            StartCoroutine(waitForSecond(1.5f, EndTutorial));
+        }));
     }
 
     public void InActiveShare()
@@ -89,7 +94,6 @@ public class TutorialHistory : MonoBehaviour
         handErase.SetActive(true);
         textErase.SetActive(true);
         playBtn.enabled = false;
-        eraseBtn.enabled = true;
     }
 
     public void EndTutorial()
@@ -98,7 +102,11 @@ public class TutorialHistory : MonoBehaviour
         textErase.SetActive(false);
         coverHistory.SetActive(false);
         coverRecord.gameObject.SetActive(false);
+        playBtn.enabled = true;
+        eraseBtn.enabled = true;
+        shareBtn.enabled = true;
         PlayerData.tutorialHistory = 1;
+        PopUpHistoryController.Instance.SetClickedBtn();
     }
 
     IEnumerator waitForSecond(float time, Action A)

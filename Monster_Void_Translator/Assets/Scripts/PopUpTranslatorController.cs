@@ -30,6 +30,9 @@ public class PopUpTranslatorController : MonoBehaviour
     int indexWait = 0;
     [SerializeField] List<Sprite> avatarCard = new List<Sprite>();
     [SerializeField] ScrollRect monsterSelectScroll;
+
+    [SerializeField] Image labelForDropdown;
+    [SerializeField] List<Sprite> imageForLabel = new List<Sprite>();
     private void Awake()
     {
         Instance = this;
@@ -131,6 +134,7 @@ public class PopUpTranslatorController : MonoBehaviour
     public void OnChangeValueInDropDown(int index)
     {
         waitTime = waitTimeInSelect[index];
+        labelForDropdown.sprite = imageForLabel[index];
         indexWait = index;
         isLoop = false;
         RecordController.Instance.timeCountDown = 0f;

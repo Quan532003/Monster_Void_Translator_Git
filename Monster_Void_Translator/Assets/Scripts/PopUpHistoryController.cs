@@ -27,7 +27,11 @@ public class PopUpHistoryController : MonoBehaviour
         var rect = inforInRecord[index].GetComponent<RectTransform>();
         if(rect.gameObject.activeInHierarchy)
         {
-            if (PlayerData.tutorialHistory == 0) return;
+            if (PlayerData.tutorialHistory == 0)
+            {
+                canChoseRecord = true;
+                return;
+            }
             rect.DOScaleY(0, 0.301f).OnComplete(()=>
             {
                 rect.gameObject.SetActive(false);
@@ -115,7 +119,7 @@ public class PopUpHistoryController : MonoBehaviour
         }
     }
 
-    void SetClickedBtn()
+    public void SetClickedBtn()
     {
         for (int i = 0; i < recordList.Count; i++)
         {
@@ -154,6 +158,7 @@ public class PopUpHistoryController : MonoBehaviour
                 recordList[index].playBtn.gameObject.SetActive(true);
                 recordList[index].isPlaying = false;
                 recordList[index].playFill.fillAmount = 0f ;
+                recordList[index].SetTextPlay(index);
                 SoundController.Instance.source.Stop();
                 if (PlayerData.tutorialHistory == 0)
                 {

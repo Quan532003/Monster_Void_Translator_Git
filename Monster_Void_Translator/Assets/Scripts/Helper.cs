@@ -86,10 +86,10 @@ public class Helper
 
         return header;
     }
-    public static string ConvertToMinuteSecond(int seconds)
+    public static string ConvertToMinuteSecond(float seconds)
     {
         string minu_sec = "";
-        int minutes = seconds / 60;
+        int minutes = (int)seconds / 60;
         seconds = seconds - minutes * 60;
         if (minutes < 10) minu_sec = "0" + minutes;
         else minu_sec = minutes + "";

@@ -35,6 +35,8 @@ public class SoundPlayEachMonster : MonoBehaviour
     public Text nameTxt;
     int waitIndex;
     [SerializeField] Button monsterHoldBtn;
+    [SerializeField] Image imageLabel;
+    [SerializeField] List<Sprite> spriteForLabel = new List<Sprite>();
     private void Awake()
     {
         ResetLoopAndTimePlay();
@@ -98,7 +100,11 @@ public class SoundPlayEachMonster : MonoBehaviour
                 timeInPlay.SetActive(false);
                 timePlay = 0f;
                 timeFill.fillAmount = 0f;
-                if(isLoop)
+                monsterBtn.GetComponent<Animator>().enabled = false;
+                monsterHoldBtn.GetComponent<Animator>().enabled = false;
+                monsterBtn.GetComponent<RectTransform>().localScale = Vector3.one;
+                monsterHoldBtn.GetComponent<RectTransform>().localScale = Vector3.one;
+                if (isLoop)
                 {
                     isCountDown = true;
                 }
@@ -109,13 +115,21 @@ public class SoundPlayEachMonster : MonoBehaviour
 
     public void OnMonsterBtnClicked()
     {
+        if (isPlaying || isCountDown) return;
         isCountDown = true;
         timeCountDown = 0f;
         noticeTimeCountDown.gameObject.SetActive(true);
-        TutorialSound.Instance.OnMonsterClicked();
+        monsterBtn.GetComponent<Animator>().enabled = true;
+        monsterHoldBtn.GetComponent<Animator>().enabled = true;
+        if(PlayerData.tutorialSound == 0)
+            TutorialSound.Instance.OnMonsterClicked();
     }
     public void OnExitMonsterBtn()
     {
+        monsterBtn.GetComponent<Animator>().enabled = false;
+        monsterHoldBtn.GetComponent<Animator>().enabled = false;
+        monsterBtn.GetComponent<RectTransform>().localScale = Vector3.one;
+        monsterHoldBtn.GetComponent<RectTransform>().localScale = Vector3.one;
         timeFill.fillAmount = 0f;
         timePlay = 0f;
         timeCountDown = 0f;
@@ -133,7 +147,10 @@ public class SoundPlayEachMonster : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         SoundController.Instance.source.Stop();
-        TutorialSound.Instance.EndTutorial();
+        if(PlayerData.tutorialSound == 0)
+        {
+            TutorialSound.Instance.EndTutorial();
+        }
     }
     public void OnSettingBtnClicked()
     {
@@ -179,6 +196,7 @@ public class SoundPlayEachMonster : MonoBehaviour
             monsterHoldBtn.gameObject.SetActive(false);
             monsterBtn.gameObject.SetActive(true);
         }
+        imageLabel.sprite = spriteForLabel[index];
         waitIndex = index;
         isLoop = false;
         ResetLoopAndTimePlay();

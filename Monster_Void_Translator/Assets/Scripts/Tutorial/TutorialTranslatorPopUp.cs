@@ -16,6 +16,8 @@ public class TutorialTranslatorPopUp : MonoBehaviour
     [SerializeField] Text tutorialPlay;
     [SerializeField] Text dragText;
     [SerializeField] Text selectText;
+    [SerializeField] Button recordBtn;
+    [SerializeField] Button playBtn;
     public static TutorialTranslatorPopUp Instance;
     [SerializeField] GameObject coverRecord;
     public bool isTutoring;
@@ -54,6 +56,7 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         coverRecord.SetActive(true);
         handRecord.SetActive(false);
         handPlay.SetActive(true);
+        recordBtn.enabled = false;
         tutorialRecord.gameObject.SetActive(false);
         tutorialPlay.gameObject.SetActive(true);
         tutorialPlay.text = "Tap to listen";
@@ -62,6 +65,7 @@ public class TutorialTranslatorPopUp : MonoBehaviour
     {
         handPlay.SetActive(active);
         tutorialPlay.gameObject.SetActive(active);
+        playBtn.enabled = false;
     }
     public void TutorialMonsterSelect()
     {
@@ -98,6 +102,8 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         PlayerData.tutorialTrans = 1;
         monsterSelect.enabled = true;
         isTutoring = false;
+        playBtn.enabled = true;
+        recordBtn.enabled = true;
     }
 
     IEnumerator waitForSecond(float time, Action A)

@@ -15,12 +15,11 @@ public class TutorialInfor : MonoBehaviour
     [SerializeField] GameObject coverback;
     [SerializeField] Text backText;
     [SerializeField] GameObject backHand;
-
+    [SerializeField] Button backBtn;
     public static TutorialInfor Instance;
     private void Awake()
     {
         Instance = this;
-        PlayerData.tutorialInfor = 0;
     }
 
     public void TutorialSelect()
@@ -42,6 +41,7 @@ public class TutorialInfor : MonoBehaviour
 
     public void Tutorialback()
     {
+        backBtn.enabled = false;
         seclectScroll.enabled = true;
         for (int i = 0; i < monster.Count; i++)
         {
@@ -52,10 +52,14 @@ public class TutorialInfor : MonoBehaviour
         tutorialSelect.gameObject.SetActive(false);
         StartCoroutine(waitForSecond(2f, () =>
         {
-            backHand.SetActive(true);
-            coverback.SetActive(true);
-            backText.gameObject.SetActive(true);
-            backText.text = "Tap to back";
+            if(PlayerData.tutorialInfor == 0)
+            {
+                backHand.SetActive(true);
+                backBtn.enabled = true;
+                coverback.SetActive(true);
+                backText.gameObject.SetActive(true);
+                backText.text = "Tap to back";
+            }
         }));
     }
 
@@ -65,6 +69,7 @@ public class TutorialInfor : MonoBehaviour
         backHand.SetActive(false);
         backText.gameObject.SetActive(false);
         coverback.SetActive(false);
+       
         PlayerData.tutorialInfor = 1;
     }
     IEnumerator waitForSecond(float time, Action A)
