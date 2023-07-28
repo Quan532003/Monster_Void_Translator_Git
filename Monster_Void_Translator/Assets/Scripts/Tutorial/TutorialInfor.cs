@@ -66,10 +66,14 @@ public class TutorialInfor : MonoBehaviour
 
     public void EndTutorial()
     {
-        backHand.SetActive(false);
-        backText.gameObject.SetActive(false);
-        coverback.SetActive(false);
-       
+        seclectScroll.enabled = true;
+        for (int i = 0; i < monster.Count; i++)
+        {
+            monster[i].enabled = true;
+        }
+        coverSelect.SetActive(false);
+        handSelect.SetActive(false);
+        tutorialSelect.gameObject.SetActive(false);
         PlayerData.tutorialInfor = 1;
     }
     IEnumerator waitForSecond(float time, Action A)

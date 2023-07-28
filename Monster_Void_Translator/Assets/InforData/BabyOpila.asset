@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71bc4fec2ece6ee4cb48468fcbde7f54, type: 3}
   m_Name: BabyOpila
   m_EditorClassIdentifier: 
-  monsterName: Baby Opila
+  monsterName: Baby Opila Birds
   gender: Male
   birthDay: March 3, 2023
   Origin: Garten of Banban II

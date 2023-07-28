@@ -92,7 +92,6 @@ public class TutorialTranslatorPopUp : MonoBehaviour
     public void EndTurorial()
     {
         coverRecord.SetActive(false);
-
         handMonsterDrag.SetActive(false);
         dragText.gameObject.SetActive(false);
         selectText.gameObject.SetActive(false);
@@ -131,8 +130,8 @@ public class TutorialTranslatorPopUp : MonoBehaviour
             dragText.gameObject.SetActive(false);
             selectText.text = "Tap to choose monster";
 
-            handSelectMonster.GetComponent<RectTransform>().position = FindMonsterInScreen();
-            selectText.GetComponent<RectTransform>().position = FindMonsterInScreen() - new Vector3(0, 1, 0);
+            handSelectMonster.GetComponent<RectTransform>().position = FindMonsterInScreen() - new Vector3(-0.3f, 0.3f, 0);
+            selectText.GetComponent<RectTransform>().position = FindMonsterInScreen() - new Vector3(0, 1.25f, 0);
             var pos = selectText.GetComponent<RectTransform>().position;
             pos.x = 0;
             selectText.GetComponent<RectTransform>().position = pos;

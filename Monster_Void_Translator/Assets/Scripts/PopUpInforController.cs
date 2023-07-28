@@ -108,7 +108,7 @@ public class PopUpInforController : MonoBehaviour
         }
         if(PlayerData.tutorialInfor == 0)
         {
-            TutorialInfor.Instance.Tutorialback();
+            TutorialInfor.Instance.EndTutorial();
         }
     }
 
@@ -149,10 +149,6 @@ public class PopUpInforController : MonoBehaviour
     }
     public void CloseBtnClicked()
     {
-        if(PlayerData.tutorialInfor== 0)
-        {
-            TutorialInfor.Instance.EndTutorial();
-        }
         monsterSelectPopUp.SetActive(true);
         monsterInforPopUp.SetActive(false);
     }

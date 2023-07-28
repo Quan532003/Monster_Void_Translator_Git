@@ -13,7 +13,10 @@ public class UIController : MonoBehaviour
     List<string> tittle = new List<string> { "Sound", "Translator", "Informations", "History" };
     public List<GameObject> activeBtn = new List<GameObject>();
     public List<GameObject> inActiveBtn = new List<GameObject>();
-   
+    [SerializeField] Image tittleImage;
+    [SerializeField] List<Sprite> tittleSprites;
+    [SerializeField] RectTransform modeTittle;
+    List<int> sizeForMode = new List<int> { 360, 570, 670, 420 };
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -37,6 +40,12 @@ public class UIController : MonoBehaviour
         inActiveBtn[currentPopUp].SetActive(true);
         currentPopUp = index;
         modeText.text = tittle[index];
+        tittleImage.sprite = tittleSprites[index];
+        var size = modeTittle.sizeDelta;
+        size.x = sizeForMode[index];
+        modeTittle.sizeDelta = size;
+        tittleImage.SetNativeSize();
+
         if(index == 0)
         {
             PopUpSoundController.Instance.SetLockSound();
