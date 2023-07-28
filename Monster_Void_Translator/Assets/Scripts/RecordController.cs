@@ -24,6 +24,7 @@ public class RecordController : MonoBehaviour
     public float timeCountDown;
     public GameObject recordImage;
     public GameObject playImage;
+    [SerializeField] GameObject fillRecord;
     private void Awake()
     {
         indexSound = 0;
@@ -99,7 +100,7 @@ public class RecordController : MonoBehaviour
         {
             TutorialTranslatorPopUp.Instance.SetActiveTutorialRecord(false);
         }
-        recordImage.SetActive(true);
+        fillRecord.SetActive(true);
         playImage.SetActive(false);
         playCover.SetActive(true);
         recordBtn.GetComponent<RectTransform>().localScale = Vector3.one * 0.7f;
@@ -108,8 +109,8 @@ public class RecordController : MonoBehaviour
     }
     public void OnStopRecordBtnClicked()
     {
+        fillRecord.SetActive(false);
         playImage.SetActive(false);
-        recordImage.SetActive(false);
         playCover.SetActive(false);
         recordBtn.GetComponent<RectTransform>().localScale = Vector3.one;
         SaveRecord.SaveDataRecord((int)SoundController.Instance.monsterSounds[PlayerData.currentMonster].monsterSounds[indexSound].length, PlayerData.currentMonster, indexSound);

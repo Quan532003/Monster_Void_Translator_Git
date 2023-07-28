@@ -36,12 +36,9 @@ public class TutorialSound : MonoBehaviour
         {
             soundCanNotUse[i].enabled = false;
         }
-        StartCoroutine(waitForSecond(0.5f, () =>
-        {
-            coverSound.SetActive(true);
-            handInSelect.SetActive(true);
-            selectText.gameObject.SetActive(true);
-        }));
+        coverSound.SetActive(true);
+        handInSelect.SetActive(true);
+        selectText.gameObject.SetActive(true);
     }
 
     public void TutorialPlaySound()
@@ -54,13 +51,10 @@ public class TutorialSound : MonoBehaviour
         selectText.gameObject.SetActive(false);
         coverSound.SetActive(false);
         handInSelect.SetActive(false);
-        StartCoroutine(waitForSecond(0.3f, () =>
-        {
-            coverInPlaySound.SetActive(true);
-            handInPlaySound.SetActive(true);
-            playText.gameObject.SetActive(true);
-            playText.text = "Hold to listen";
-        }));
+        coverInPlaySound.SetActive(true);
+        handInPlaySound.SetActive(true);
+        playText.gameObject.SetActive(true);
+        playText.text = "Hold to listen";
 
     }
     public void OnMonsterClicked()

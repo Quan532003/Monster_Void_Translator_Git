@@ -1,3 +1,4 @@
+using DG.Tweening;
 using System;
 using System.Collections;
 using System.Collections.Generic;
@@ -16,7 +17,8 @@ public class UIController : MonoBehaviour
     [SerializeField] Image tittleImage;
     [SerializeField] List<Sprite> tittleSprites;
     [SerializeField] RectTransform modeTittle;
-    List<int> sizeForMode = new List<int> { 360, 570, 670, 420 };
+    List<int> sizeForMode = new List<int> { 400, 600, 700, 450 };
+    [SerializeField] Image fillRecord;
     private void Awake()
     {
         Application.targetFrameRate = 60;
@@ -28,6 +30,15 @@ public class UIController : MonoBehaviour
                 OnModeBtnClicked(index);
             });
         }
+        FillRandom();
+    }
+    void FillRandom()
+    {
+        float fill = (float)UnityEngine.Random.Range(0f, 1f);
+        fillRecord.DOFillAmount(fill, 0.2f).OnComplete(() =>
+        {
+            FillRandom();
+        });
     }
     void OnModeBtnClicked(int index)
     {
@@ -39,11 +50,7 @@ public class UIController : MonoBehaviour
         activeBtn[currentPopUp].SetActive(false);
         inActiveBtn[currentPopUp].SetActive(true);
         currentPopUp = index;
-        modeText.text = tittle[index];
         tittleImage.sprite = tittleSprites[index];
-        var size = modeTittle.sizeDelta;
-        size.x = sizeForMode[index];
-        modeTittle.sizeDelta = size;
         tittleImage.SetNativeSize();
 
         if(index == 0)
@@ -54,6 +61,7 @@ public class UIController : MonoBehaviour
             {
                 TutorialSound.Instance.TutorialSelectMonster();
             }
+            RecordController.Instance.OnStopPlayBtnClicked();
         }
         if(index == 1)
         {
@@ -62,6 +70,7 @@ public class UIController : MonoBehaviour
         }
         if(index == 2)
         {
+            RecordController.Instance.OnStopPlayBtnClicked();
             PopUpInforController.Instance.SetLockBtn();
             PopUpInforController.Instance.SetBtnMonsterClicked();
             if(PlayerData.tutorialInfor == 0)
@@ -71,6 +80,8 @@ public class UIController : MonoBehaviour
         }
         if(index == 3)
         {
+            RecordController.Instance.OnStopPlayBtnClicked();
+            RecordController.Instance.OnStopRecordBtnClicked();
             PopUpHistoryController.Instance.SetListRecord();
             if(PlayerData.tutorialHistory == 0)
             {

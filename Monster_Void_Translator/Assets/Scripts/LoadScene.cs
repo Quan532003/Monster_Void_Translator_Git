@@ -1,3 +1,5 @@
+using DG.Tweening;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
@@ -11,7 +13,13 @@ public class LoadScene : MonoBehaviour
     public void Load(int scene)
     {
         slider.gameObject.SetActive(true);
-        StartCoroutine(loadScene(scene));
+        slider.DOValue(1f, 3f).OnComplete(()=>
+        {
+            StartCoroutine(loadScene(1));
+        });
+        
+        
+
     }
     bool start = false;
 
@@ -23,15 +31,18 @@ public class LoadScene : MonoBehaviour
             start = true;
         }
     }
-
+    IEnumerator waitforSecond(float time, Action A)
+    {
+        yield return new WaitForSeconds(time);
+        A?.Invoke();
+    }
     IEnumerator loadScene(int scene)
     {
+        yield return new WaitForSeconds(0.1f);
         AsyncOperation loadOperation = SceneManager.LoadSceneAsync(scene);
 
         while (!loadOperation.isDone)
         {
-            float progress = Mathf.Clamp01(loadOperation.progress / 0.9f);
-            slider.value = progress;
             yield return null;
         }
     }

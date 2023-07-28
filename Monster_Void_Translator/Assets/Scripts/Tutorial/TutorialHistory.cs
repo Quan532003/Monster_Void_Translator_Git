@@ -32,8 +32,6 @@ public class TutorialHistory : MonoBehaviour
 
     public void TutorialSelect()
     {
-        StartCoroutine(waitForSecond(0.3f, () =>
-        {
             coverHistory.SetActive(true);
             coverRecord.gameObject.SetActive(true);
             var rect = viewPos.rect.height;
@@ -42,7 +40,6 @@ public class TutorialHistory : MonoBehaviour
             coverRecord.sizeDelta = rectCoverRecord;
             handSelect.SetActive(true);
             textSelect.SetActive(true);
-        }));
     }
 
     public void TutorialShare()
@@ -52,11 +49,11 @@ public class TutorialHistory : MonoBehaviour
         handShare.SetActive(true);
         textShare.SetActive(true);
         playBtn.enabled = false;
-        StartCoroutine(waitForSecond(1.5f, ()=>
+        StartCoroutine(waitForSecond(0.5f, ()=>
         {
             InActiveShare();
             TutorialErase();
-            StartCoroutine(waitForSecond(1.5f, EndTutorial));
+            StartCoroutine(waitForSecond(0.5f, EndTutorial));
         }));
     }
 
@@ -73,7 +70,7 @@ public class TutorialHistory : MonoBehaviour
         coverRecord.sizeDelta = size;
         handSelect.SetActive(false);
         textSelect.SetActive(false);
-        StartCoroutine(waitForSecond(1f, () =>
+        StartCoroutine(waitForSecond(0.5f, () =>
         {
             handPlay.SetActive(true);
             textPlay.SetActive(true);

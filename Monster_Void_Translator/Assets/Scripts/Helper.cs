@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.IO;
 using UnityEngine;
 
 public class Helper
@@ -99,6 +97,7 @@ public class Helper
         if (seconds < 10) minu_sec += ("0" + seconds);
         else minu_sec += (seconds + "");
         return minu_sec;
+       
     }
 
     public static string GetRecordDay()

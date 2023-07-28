@@ -27,4 +27,4 @@ MonoBehaviour:
   storyHeight: 850
   furturePosY: -650
   storyPosY: -1200
-  colorTitle: {r: 0.4392157, g: 0.38431373, b: 0, a: 1}
+  colorTitle: {r: 1, g: 1, b: 0.0037735105, a: 1}

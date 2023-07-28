@@ -33,6 +33,7 @@ public class PopUpTranslatorController : MonoBehaviour
 
     [SerializeField] Image labelForDropdown;
     [SerializeField] List<Sprite> imageForLabel = new List<Sprite>();
+    [SerializeField] GameObject lockLoop;
     private void Awake()
     {
         Instance = this;
@@ -112,6 +113,11 @@ public class PopUpTranslatorController : MonoBehaviour
     }
     public void OnLoopBtnClicked()
     {
+        if(lockLoop.activeInHierarchy)
+        {
+            lockLoop.SetActive(false);
+            return;
+        }
         noticeLoop.SetActive(!noticeLoop.activeInHierarchy);
         if (noticeLoop.activeInHierarchy) noticeTimer.SetActive(false);
         isLoop = !isLoop;

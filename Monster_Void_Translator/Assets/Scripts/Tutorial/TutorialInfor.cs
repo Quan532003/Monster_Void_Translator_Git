@@ -29,13 +29,10 @@ public class TutorialInfor : MonoBehaviour
         {
             monster[i].enabled = false;
         }
-        StartCoroutine(waitForSecond(0.5f, () =>
-        {
             coverSelect.SetActive(true);
             handSelect.SetActive(true);
             tutorialSelect.gameObject.SetActive(true);
             tutorialSelect.text = "Tap to choose monster";
-        }));
     }
 
 

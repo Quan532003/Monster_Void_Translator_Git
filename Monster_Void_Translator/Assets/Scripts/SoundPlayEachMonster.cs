@@ -39,6 +39,8 @@ public class SoundPlayEachMonster : MonoBehaviour
     [SerializeField] Image imageLabel;
     [SerializeField] List<Sprite> spriteForLabel = new List<Sprite>();
     float timeVibration = 0f;
+    [SerializeField] GameObject top;
+    [SerializeField] GameObject loopAd;
     private void Awake()
     {
         ResetLoopAndTimePlay();
@@ -158,6 +160,7 @@ public class SoundPlayEachMonster : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         SoundController.Instance.source.Stop();
+        top.SetActive(true);
     }
     public void OnSettingBtnClicked()
     {
@@ -166,6 +169,11 @@ public class SoundPlayEachMonster : MonoBehaviour
 
     public void OnLoopBtnClicked()
     {
+        if(loopAd.activeInHierarchy)
+        {
+            loopAd.SetActive(false);
+            return;
+        }
         isLoop = !isLoop;
         if(isLoop)
         {
@@ -192,7 +200,7 @@ public class SoundPlayEachMonster : MonoBehaviour
     }
     void SetMonsterWithValue(int value)
     {
-        if (value == 0)
+        if (value == 0 && !isLoop)
         {
             monsterBtn.gameObject.SetActive(false);
             monsterHoldBtn.gameObject.SetActive(true);

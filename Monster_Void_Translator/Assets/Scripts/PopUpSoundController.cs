@@ -10,6 +10,7 @@ public class PopUpSoundController : MonoBehaviour
     List<GameObject> lockSound = new List<GameObject>();
     public static PopUpSoundController Instance;
     public SoundPlayEachMonster SoundEachMonster;
+    [SerializeField] GameObject top;
     private void Awake()
     {
         Instance = this;
@@ -49,6 +50,10 @@ public class PopUpSoundController : MonoBehaviour
     }
     void OnMonsterBtnClicked(int index)
     {
+        if (PlayerData.tutorialSound == 0)
+        {
+            TutorialSound.Instance.TutorialPlaySound();
+        }
         if (!lockSound[index].activeInHierarchy)
         {
             PlayerData.monsterIndexInSound = index;
@@ -56,6 +61,7 @@ public class PopUpSoundController : MonoBehaviour
             SoundEachMonster.ResetLoopAndTimePlay();
             SoundEachMonster.SetName();
             SoundEachMonster.SetSprite();
+            top.SetActive(false);
         }
         else
         {
@@ -66,10 +72,7 @@ public class PopUpSoundController : MonoBehaviour
             SoundEachMonster.SetName();
             SoundEachMonster.SetSprite();
             Helper.SetLockMonster(index);
-        }
-        if(PlayerData.tutorialSound == 0)
-        {
-            TutorialSound.Instance.TutorialPlaySound();
+            top.SetActive(false);
         }
     }
 }

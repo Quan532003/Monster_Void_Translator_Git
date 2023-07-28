@@ -33,18 +33,15 @@ public class TutorialTranslatorPopUp : MonoBehaviour
     public void TutorialRecord()
     {
         isTutoring = true;
-        StartCoroutine(waitForSecond(1f, () =>
-        {
-            monsterAndRecordCover.SetActive(true);
-            monsterSelectCover.SetActive(false);
-            handRecord.SetActive(true);
-            handPlay.SetActive(false);
-            tutorialRecord.gameObject.SetActive(true);
-            tutorialRecord.text = "Hold to record";
-            dragText.gameObject.SetActive(false);
-            selectText.gameObject.SetActive(false);
-            handMonsterDrag.SetActive(false);
-        }));
+        monsterAndRecordCover.SetActive(true);
+        monsterSelectCover.SetActive(false);
+        handRecord.SetActive(true);
+        handPlay.SetActive(false);
+        tutorialRecord.gameObject.SetActive(true);
+        tutorialRecord.text = "Hold to record";
+        dragText.gameObject.SetActive(false);
+        selectText.gameObject.SetActive(false);
+        handMonsterDrag.SetActive(false);
     }
     public void SetActiveTutorialRecord(bool active)
     {
@@ -74,7 +71,7 @@ public class TutorialTranslatorPopUp : MonoBehaviour
         tutorialPlay.gameObject.SetActive(false);
         tutorialRecord.gameObject.SetActive(false);
         top.SetSiblingIndex(1);
-        StartCoroutine(waitForSecond(1f, ()=>
+        StartCoroutine(waitForSecond(0.2f, ()=>
         {
             handMonsterDrag.SetActive(true);
             monsterSelectCover.SetActive(true);
